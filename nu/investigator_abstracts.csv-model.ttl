@@ -1,0 +1,541 @@
+@prefix vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#> .
+@prefix c4o: <http://purl.org/spar/c4o/> .
+@prefix role: <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
+@prefix ocrer: <http://purl.org/net/OCRe/research.owl#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl2: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix aka: <http://vivoweb.org/ontology/aka#> .
+@prefix far: <http://vitro.mannlib.cornell.edu/ns/reporting#> .
+@prefix ocresd: <http://purl.org/net/OCRe/study_design.owl#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix aktp: <http://www.aktors.org/ontology/portal#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
+@prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
+@prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
+@prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
+@prefix ns2: <http://www.w3.org/2008/05/skos#> .
+@prefix vivoc: <http://vivo.library.cornell.edu/ns/0.1#> .
+@prefix pubmed: <http://vitro.mannlib.cornell.edu/ns/pubmed#> .
+@prefix cce: <http://vivoweb.org/ontology/cornell-cooperative-extension#> .
+@prefix mann: <http://vivo.cornell.edu/ns/mannadditions/0.1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix datagetter: <java:edu/cornell/mannlib/vitro/webapp/utils/datagetter/> .
+@prefix hr: <http://vivo.cornell.edu/ns/hr/0.9/hr.owl#> .
+@prefix pvs: <http://vivoweb.org/ontology/provenance-support#> .
+@prefix wos: <http://vivo.mannlib.cornell.edu/ns/ThomsonWOS/0.1#> .
+@prefix scirr: <http://vivoweb.org/ontology/scientific-research-resource#> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix stars: <http://vitro.mannlib.cornell.edu/ns/cornell/stars/classes#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns3: <http://purl.org/net/OCRe/study_protocol.owl#> .
+@prefix ai: <http://vivoweb.org/ontology/activity-insight#> .
+@prefix ns4: <http://purl.org/dc/terms/> .
+@prefix scires: <http://vivoweb.org/ontology/scientific-research#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wcmc: <http://weill.cornell.edu/vivo/ontology/wcmc#> .
+@prefix geo: <http://aims.fao.org/aos/geopolitical.owl#> .
+@prefix app: <http://eagle-i.org/ont/app/1.0/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vlocal: <http://localhost/vivo/ontology/vivo-local#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
+@prefix ospcu: <http://vivoweb.org/ontology/cu-vivo-osp#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix swvs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix local: <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1972ehmk6x1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "wakibbe_investigator_abstracts.csv" ;
+	km-dev:modelPublicationTime "1416347835014"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"abstract_uuid\"}],[{\"columnName\":\"investigator_uuid\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"authorship_uri\"}],[{\"columnName\":\"abstract_uuid\"}],[{\"columnName\":\"investigator_uuid\"}]]" ;
+	km-dev:hasModelLabel "wakibbe_investigator_abstracts.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"investigator_uuid\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://localhost/vivo/ontology/vivo-local#peopleID\",
+                    \"DomainLabel\": \"vivo:FacultyMember1 (add)\",
+                    \"DomainId\": \"http://vivoweb.org/ontology/core#FacultyMember1\",
+                    \"DomainUri\": \"http://vivoweb.org/ontology/core#FacultyMember\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"investigator_uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"investigator_uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"abstract_uuid\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://localhost/vivo/ontology/vivo-local#abstractID\",
+                    \"DomainLabel\": \"bibo:AcademicArticle1 (add)\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AcademicArticle\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"abstract_uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"abstract_uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://xmlns.com/foaf/0.1/topic_interest\",
+                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
+                    \"edgeSourceId\": \"http://vivoweb.org/ontology/core#FacultyMember1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP2:WS1924AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://vivoweb.org/ontology/core#FacultyMember\",
+                    \"edgeId\": \"http://vivoweb.org/ontology/core#relates\",
+                    \"edgeTargetId\": \"http://vivoweb.org/ontology/core#FacultyMember1\",
+                    \"edgeSourceId\": \"http://vivoweb.org/ontology/core#Authorship1 (add)\",
+                    \"edgeSourceUri\": \"http://vivoweb.org/ontology/core#Authorship\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://xmlns.com/foaf/0.1/topic_interest\",
+                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
+                    \"edgeSourceId\": \"http://vivoweb.org/ontology/core#FacultyMember1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP2:WS1924AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://purl.org/ontology/bibo/AcademicArticle\",
+                    \"edgeId\": \"http://vivoweb.org/ontology/core#relates\",
+                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
+                    \"edgeSourceId\": \"http://vivoweb.org/ontology/core#Authorship1\",
+                    \"edgeSourceUri\": \"http://vivoweb.org/ontology/core#Authorship\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"abstract_uuid\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"authorship_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return \\\"http://vivo.northwestern.edu/authorship/\\\"+getValue(\\\"investigator_uuid\\\")+\\\"_\\\"+getValue(\\\"abstract_uuid\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"abstract_uuid\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"investigator_uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"authorship_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"authorship_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://vivoweb.org/ontology/core#Authorship\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://vivoweb.org/ontology/core#Authorship1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"vivo:Authorship1\",
+                    \"DomainId\": \"http://vivoweb.org/ontology/core#Authorship1\",
+                    \"DomainUri\": \"http://vivoweb.org/ontology/core#Authorship\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"authorship_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"authorship_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    }
+]""" .
+
+km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 a rr:TriplesMap .
+
+_:node1972ehmk6x1 km-dev:hasTriplesMap km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 .
+
+km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x2 rr:tableName "wakibbe_investigator_abstracts.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasLogicalTable _:node1972ehmk6x2 .
+
+km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 rr:logicalTable _:node1972ehmk6x2 ;
+	rr:subjectMap _:node1972ehmk6x3 .
+
+_:node1972ehmk6x1 km-dev:hasSubjectMap _:node1972ehmk6x3 .
+
+_:node1972ehmk6x3 km-dev:isPartOfMapping _:node1972ehmk6x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://purl.org/ontology/bibo/AcademicArticle1" ;
+	rr:class bibo:AcademicArticle ;
+	rr:template "http://localhost:8080/source/{abstract_uuid}" .
+
+km-dev:PredicateObjectMap_33545002-4646-4547-b153-030c332e93f1 rr:predicate vlocal:abstractID .
+
+_:node1972ehmk6x4 rr:column "abstract_uuid" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasObjectMap _:node1972ehmk6x4 .
+
+km-dev:PredicateObjectMap_33545002-4646-4547-b153-030c332e93f1 rr:objectMap _:node1972ehmk6x4 .
+
+km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 rr:predicateObjectMap km-dev:PredicateObjectMap_33545002-4646-4547-b153-030c332e93f1 .
+
+km-dev:PredicateObjectMap_33545002-4646-4547-b153-030c332e93f1 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_33545002-4646-4547-b153-030c332e93f1 .
+
+km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 a rr:TriplesMap .
+
+_:node1972ehmk6x1 km-dev:hasTriplesMap km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 .
+
+km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x5 rr:tableName "wakibbe_investigator_abstracts.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasLogicalTable _:node1972ehmk6x5 .
+
+km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 rr:logicalTable _:node1972ehmk6x5 ;
+	rr:subjectMap _:node1972ehmk6x6 .
+
+_:node1972ehmk6x1 km-dev:hasSubjectMap _:node1972ehmk6x6 .
+
+_:node1972ehmk6x6 km-dev:isPartOfMapping _:node1972ehmk6x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://vivoweb.org/ontology/core#Authorship1" ;
+	rr:class vivo:Authorship ;
+	rr:template "http://vivo.northwestern.edu/authorship/{investigator_uuid}_{abstract_uuid}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_186814f8-5c2a-4fa9-af23-6c03f9f26e02 rr:predicate vivo:relates .
+
+km-dev:RefObjectMap_87ea246d-8f6f-489e-9e6b-6b05d74c850d a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasObjectMap km-dev:RefObjectMap_87ea246d-8f6f-489e-9e6b-6b05d74c850d .
+
+km-dev:PredicateObjectMap_186814f8-5c2a-4fa9-af23-6c03f9f26e02 rr:objectMap km-dev:RefObjectMap_87ea246d-8f6f-489e-9e6b-6b05d74c850d .
+
+km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 rr:predicateObjectMap km-dev:PredicateObjectMap_186814f8-5c2a-4fa9-af23-6c03f9f26e02 .
+
+km-dev:PredicateObjectMap_186814f8-5c2a-4fa9-af23-6c03f9f26e02 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_186814f8-5c2a-4fa9-af23-6c03f9f26e02 .
+
+km-dev:PredicateObjectMap_11d44d76-d072-4aa7-9468-17104fb89708 rr:predicate vivo:relates .
+
+km-dev:RefObjectMap_5f90c3b7-cc09-4911-a418-1b8a09484936 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasObjectMap km-dev:RefObjectMap_5f90c3b7-cc09-4911-a418-1b8a09484936 .
+
+km-dev:PredicateObjectMap_11d44d76-d072-4aa7-9468-17104fb89708 rr:objectMap km-dev:RefObjectMap_5f90c3b7-cc09-4911-a418-1b8a09484936 .
+
+km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 rr:predicateObjectMap km-dev:PredicateObjectMap_11d44d76-d072-4aa7-9468-17104fb89708 .
+
+km-dev:PredicateObjectMap_11d44d76-d072-4aa7-9468-17104fb89708 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_11d44d76-d072-4aa7-9468-17104fb89708 .
+
+km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 a rr:TriplesMap .
+
+_:node1972ehmk6x1 km-dev:hasTriplesMap km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 .
+
+km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x7 rr:tableName "wakibbe_investigator_abstracts.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasLogicalTable _:node1972ehmk6x7 .
+
+km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 rr:logicalTable _:node1972ehmk6x7 ;
+	rr:subjectMap _:node1972ehmk6x8 .
+
+_:node1972ehmk6x1 km-dev:hasSubjectMap _:node1972ehmk6x8 .
+
+_:node1972ehmk6x8 km-dev:isPartOfMapping _:node1972ehmk6x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://vivoweb.org/ontology/core#FacultyMember1" ;
+	rr:class vivo:FacultyMember ;
+	rr:template "http://localhost:8080/source/{investigator_uuid}" .
+
+km-dev:PredicateObjectMap_3b3554b1-63ed-4349-a3fb-8a293dda672d rr:predicate vlocal:peopleID .
+
+_:node1972ehmk6x9 rr:column "investigator_uuid" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasObjectMap _:node1972ehmk6x9 .
+
+km-dev:PredicateObjectMap_3b3554b1-63ed-4349-a3fb-8a293dda672d rr:objectMap _:node1972ehmk6x9 .
+
+km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 rr:predicateObjectMap km-dev:PredicateObjectMap_3b3554b1-63ed-4349-a3fb-8a293dda672d .
+
+km-dev:PredicateObjectMap_3b3554b1-63ed-4349-a3fb-8a293dda672d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+
+_:node1972ehmk6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3b3554b1-63ed-4349-a3fb-8a293dda672d .

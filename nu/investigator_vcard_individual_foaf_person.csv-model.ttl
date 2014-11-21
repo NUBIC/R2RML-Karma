@@ -1,0 +1,2011 @@
+# An attempt to model the vivo:FacultyMember as a foaf:Person 
+# cf. https://wiki.duraspace.org/display/VIVO/VIVO-ISF+1.6+relationship+diagrams%3A+Authorship
+@prefix vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#> .
+@prefix c4o: <http://purl.org/spar/c4o/> .
+@prefix role: <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
+@prefix ocrer: <http://purl.org/net/OCRe/research.owl#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl2: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix aka: <http://vivoweb.org/ontology/aka#> .
+@prefix far: <http://vitro.mannlib.cornell.edu/ns/reporting#> .
+@prefix ocresd: <http://purl.org/net/OCRe/study_design.owl#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix aktp: <http://www.aktors.org/ontology/portal#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
+@prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
+@prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
+@prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
+@prefix ns2: <http://www.w3.org/2008/05/skos#> .
+@prefix vivoc: <http://vivo.library.cornell.edu/ns/0.1#> .
+@prefix pubmed: <http://vitro.mannlib.cornell.edu/ns/pubmed#> .
+@prefix cce: <http://vivoweb.org/ontology/cornell-cooperative-extension#> .
+@prefix mann: <http://vivo.cornell.edu/ns/mannadditions/0.1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix datagetter: <java:edu/cornell/mannlib/vitro/webapp/utils/datagetter/> .
+@prefix hr: <http://vivo.cornell.edu/ns/hr/0.9/hr.owl#> .
+@prefix pvs: <http://vivoweb.org/ontology/provenance-support#> .
+@prefix wos: <http://vivo.mannlib.cornell.edu/ns/ThomsonWOS/0.1#> .
+@prefix scirr: <http://vivoweb.org/ontology/scientific-research-resource#> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix stars: <http://vitro.mannlib.cornell.edu/ns/cornell/stars/classes#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns3: <http://purl.org/net/OCRe/study_protocol.owl#> .
+@prefix ai: <http://vivoweb.org/ontology/activity-insight#> .
+@prefix ns4: <http://purl.org/dc/terms/> .
+@prefix scires: <http://vivoweb.org/ontology/scientific-research#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wcmc: <http://weill.cornell.edu/vivo/ontology/wcmc#> .
+@prefix geo: <http://aims.fao.org/aos/geopolitical.owl#> .
+@prefix app: <http://eagle-i.org/ont/app/1.0/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vlocal: <http://localhost/vivo/ontology/vivo-local#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
+@prefix ospcu: <http://vivoweb.org/ontology/cu-vivo-osp#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix swvs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix local: <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node197742ba0x1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "wakibbe_investigator.csv" ;
+	km-dev:modelPublicationTime "1416504618305"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"faculty_interests\"}],[{\"columnName\":\"uuid\"}],[{\"columnName\":\"faculty_research_summary\"}],[{\"columnName\":\"display_name\"}],[{\"columnName\":\"first_name\"}],[{\"columnName\":\"last_name\"}],[{\"columnName\":\"middle_name\"}],[{\"columnName\":\"title\"}],[{\"columnName\":\"email\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"faculty_interests\"}],[{\"columnName\":\"uuid\"}],[{\"columnName\":\"faculty_research_summary\"}],[{\"columnName\":\"display_name\"}],[{\"columnName\":\"first_name\"}],[{\"columnName\":\"last_name\"}],[{\"columnName\":\"middle_name\"}],[{\"columnName\":\"vcard_id\"}],[{\"columnName\":\"title\"}],[{\"columnName\":\"email\"}]]" ;
+	km-dev:hasModelLabel "wakibbe_investigator.csv" ;
+	km-dev:hasBaseURI "http://vivo.northwestern.edu/individual/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://vivo.northwestern.edu/individual/\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"uuid\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://localhost/vivo/ontology/vivo-local#peopleID\",
+                    \"DomainLabel\": \"foaf:Person1 (add)\",
+                    \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1 (add)\",
+                    \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"uuid\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [
+                    {
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://localhost/vivo/ontology/vivo-local#peopleID\",
+                        \"DomainLabel\": \"foaf:Person1\",
+                        \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                        \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                    },
+                    {
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://localhost/vivo/ontology/vivo-local#peopleID\",
+                        \"DomainLabel\": \"vcard:Individual1 (add)\",
+                        \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1 (add)\",
+                        \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"uuid\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [
+                    {
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://localhost/vivo/ontology/vivo-local#peopleID\",
+                        \"DomainLabel\": \"foaf:Person1\",
+                        \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                        \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                    },
+                    {
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://localhost/vivo/ontology/vivo-local#peopleID\",
+                        \"DomainLabel\": \"vcard:Individual\",
+                        \"DomainId\": \"\",
+                        \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"email\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#email\",
+                    \"DomainLabel\": \"vcard:Individual1 (add)\",
+                    \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1 (add)\",
+                    \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"email\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [
+                    {
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://www.w3.org/2006/vcard/ns#email\",
+                        \"DomainLabel\": \"vcard:Individual1\",
+                        \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1\",
+                        \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                    },
+                    {
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://www.w3.org/2006/vcard/ns#email\",
+                        \"DomainLabel\": \"foaf:Person1\",
+                        \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                        \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"faculty_interests\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://vivoweb.org/ontology/core#freetextKeyword\",
+                    \"DomainLabel\": \"foaf:Person1\",
+                    \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                    \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"faculty_interests\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"faculty_interests\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"faculty_interests\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [
+                    {
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://vivoweb.org/ontology/core#freetextKeyword\",
+                        \"DomainLabel\": \"foaf:Person1\",
+                        \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                        \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                    },
+                    {
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://vivoweb.org/ontology/core#freetextKeyword\",
+                        \"DomainLabel\": \"vcard:Individual1 (add)\",
+                        \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1 (add)\",
+                        \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"faculty_interests\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"faculty_interests\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"faculty_research_summary\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://vivoweb.org/ontology/core#researchOverview\",
+                    \"DomainLabel\": \"foaf:Person1\",
+                    \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                    \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"faculty_research_summary\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"faculty_research_summary\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"faculty_research_summary\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [
+                    {
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://vivoweb.org/ontology/core#researchOverview\",
+                        \"DomainLabel\": \"foaf:Person1\",
+                        \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                        \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                    },
+                    {
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://vivoweb.org/ontology/core#researchOverview\",
+                        \"DomainLabel\": \"vcard:Individual1 (add)\",
+                        \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1 (add)\",
+                        \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"faculty_research_summary\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"faculty_research_summary\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"display_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"foaf:Person1\",
+                    \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                    \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"display_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"display_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"display_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [
+                    {
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                        \"DomainLabel\": \"foaf:Person1\",
+                        \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                        \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                    },
+                    {
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                        \"DomainLabel\": \"vcard:Individual1 (add)\",
+                        \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1 (add)\",
+                        \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"display_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"display_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"first_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#givenName\",
+                    \"DomainLabel\": \"foaf:Person1\",
+                    \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                    \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"first_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"first_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"first_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [
+                    {
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://www.w3.org/2006/vcard/ns#givenName\",
+                        \"DomainLabel\": \"foaf:Person1\",
+                        \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                        \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                    },
+                    {
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://www.w3.org/2006/vcard/ns#givenName\",
+                        \"DomainLabel\": \"vcard:Individual1 (add)\",
+                        \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1 (add)\",
+                        \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"first_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"first_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"last_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#familyName\",
+                    \"DomainLabel\": \"foaf:Person1\",
+                    \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                    \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"last_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [
+                    {
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://www.w3.org/2006/vcard/ns#familyName\",
+                        \"DomainLabel\": \"foaf:Person1\",
+                        \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                        \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                    },
+                    {
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://www.w3.org/2006/vcard/ns#familyName\",
+                        \"DomainLabel\": \"vcard:Individual1 (add)\",
+                        \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1 (add)\",
+                        \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"middle_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [
+                    {
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://www.w3.org/2006/vcard/ns#additionalName\",
+                        \"DomainLabel\": \"foaf:Person1\",
+                        \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                        \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                    },
+                    {
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://www.w3.org/2006/vcard/ns#additionalName\",
+                        \"DomainLabel\": \"vcard:Individual1 (add)\",
+                        \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1 (add)\",
+                        \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"middle_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"middle_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"title\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [
+                    {
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://vivoweb.org/ontology/core#hrJobTitle\",
+                        \"DomainLabel\": \"foaf:Person1\",
+                        \"DomainId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                        \"DomainUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                    },
+                    {
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://vivoweb.org/ontology/core#hrJobTitle\",
+                        \"DomainLabel\": \"vcard:Individual1 (add)\",
+                        \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1 (add)\",
+                        \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"title\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"title\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"uuid\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"vcard_id\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"uuid\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"vcard_id\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"vcard_id\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://localhost/vivo/ontology/vivo-local#peopleID\",
+                    \"DomainLabel\": \"vcard:Individual1 (add)\",
+                    \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1 (add)\",
+                    \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"vcard_id\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"vcard_id\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://xmlns.com/foaf/0.1/topic_interest\",
+                    \"edgeTargetId\": \"http://www.w3.org/2006/vcard/ns#Individual1\",
+                    \"edgeSourceId\": \"http://xmlns.com/foaf/0.1/Person1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS2AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://www.w3.org/2006/vcard/ns#Individual\",
+                    \"edgeId\": \"http://purl.obolibrary.org/obo/ARG_2000028\",
+                    \"edgeTargetId\": \"http://www.w3.org/2006/vcard/ns#Individual1\",
+                    \"edgeSourceId\": \"http://xmlns.com/foaf/0.1/Person1\",
+                    \"edgeSourceUri\": \"http://xmlns.com/foaf/0.1/Person\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"email\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#email\",
+                    \"DomainLabel\": \"vcard:Individual\",
+                    \"DomainId\": \"\",
+                    \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"email\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#email\",
+                    \"DomainLabel\": \"vcard:Individual1\",
+                    \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1\",
+                    \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"email\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"first_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#givenName\",
+                    \"DomainLabel\": \"vcard:Individual\",
+                    \"DomainId\": \"\",
+                    \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"first_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"first_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"first_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#givenName\",
+                    \"DomainLabel\": \"vcard:Individual1\",
+                    \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1\",
+                    \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"first_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"first_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"last_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#familyName\",
+                    \"DomainLabel\": \"vcard:Individual\",
+                    \"DomainId\": \"\",
+                    \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"last_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#familyName\",
+                    \"DomainLabel\": \"vcard:Individual1\",
+                    \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1\",
+                    \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"last_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"middle_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#additionalName\",
+                    \"DomainLabel\": \"vcard:Individual\",
+                    \"DomainId\": \"\",
+                    \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"middle_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"middle_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"middle_name\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2006/vcard/ns#additionalName\",
+                    \"DomainLabel\": \"vcard:Individual1\",
+                    \"DomainId\": \"http://www.w3.org/2006/vcard/ns#Individual1\",
+                    \"DomainUri\": \"http://www.w3.org/2006/vcard/ns#Individual\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isKey\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"middle_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"middle_name\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    }
+]""" .
+
+km-dev:TriplesMap_3b375977-7d49-44e3-a8f0-7efc15422ab2 a rr:TriplesMap .
+
+_:node197742ba0x1 km-dev:hasTriplesMap km-dev:TriplesMap_3b375977-7d49-44e3-a8f0-7efc15422ab2 .
+
+km-dev:TriplesMap_3b375977-7d49-44e3-a8f0-7efc15422ab2 km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x2 rr:tableName "wakibbe_investigator.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasLogicalTable _:node197742ba0x2 .
+
+km-dev:TriplesMap_3b375977-7d49-44e3-a8f0-7efc15422ab2 rr:logicalTable _:node197742ba0x2 ;
+	rr:subjectMap _:node197742ba0x3 .
+
+_:node197742ba0x1 km-dev:hasSubjectMap _:node197742ba0x3 .
+
+_:node197742ba0x3 km-dev:isPartOfMapping _:node197742ba0x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.w3.org/2006/vcard/ns#Individual1" ;
+	rr:class vcard:Individual ;
+	rr:template "http://vivo.northwestern.edu/individual/{vcard_id}" .
+
+km-dev:PredicateObjectMap_a7274fec-611b-4ee5-85d4-491b17adf613 rr:predicate vlocal:peopleID .
+
+_:node197742ba0x4 rr:column "uuid" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap _:node197742ba0x4 .
+
+km-dev:PredicateObjectMap_a7274fec-611b-4ee5-85d4-491b17adf613 rr:objectMap _:node197742ba0x4 .
+
+km-dev:TriplesMap_3b375977-7d49-44e3-a8f0-7efc15422ab2 rr:predicateObjectMap km-dev:PredicateObjectMap_a7274fec-611b-4ee5-85d4-491b17adf613 .
+
+km-dev:PredicateObjectMap_a7274fec-611b-4ee5-85d4-491b17adf613 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a7274fec-611b-4ee5-85d4-491b17adf613 .
+
+km-dev:PredicateObjectMap_154bec2b-bc1a-4bfb-9037-56f942599c6b rr:predicate vcard:additionalName .
+
+_:node197742ba0x5 rr:column "middle_name" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap _:node197742ba0x5 .
+
+km-dev:PredicateObjectMap_154bec2b-bc1a-4bfb-9037-56f942599c6b rr:objectMap _:node197742ba0x5 .
+
+km-dev:TriplesMap_3b375977-7d49-44e3-a8f0-7efc15422ab2 rr:predicateObjectMap km-dev:PredicateObjectMap_154bec2b-bc1a-4bfb-9037-56f942599c6b .
+
+km-dev:PredicateObjectMap_154bec2b-bc1a-4bfb-9037-56f942599c6b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_154bec2b-bc1a-4bfb-9037-56f942599c6b .
+
+km-dev:PredicateObjectMap_99318d95-8c32-4933-8c6d-def2b800168f rr:predicate vcard:email .
+
+_:node197742ba0x6 rr:column "email" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap _:node197742ba0x6 .
+
+km-dev:PredicateObjectMap_99318d95-8c32-4933-8c6d-def2b800168f rr:objectMap _:node197742ba0x6 .
+
+km-dev:TriplesMap_3b375977-7d49-44e3-a8f0-7efc15422ab2 rr:predicateObjectMap km-dev:PredicateObjectMap_99318d95-8c32-4933-8c6d-def2b800168f .
+
+km-dev:PredicateObjectMap_99318d95-8c32-4933-8c6d-def2b800168f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_99318d95-8c32-4933-8c6d-def2b800168f .
+
+km-dev:PredicateObjectMap_114162f4-e674-43aa-a072-d738bec2001f rr:predicate vcard:familyName .
+
+_:node197742ba0x7 rr:column "last_name" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap _:node197742ba0x7 .
+
+km-dev:PredicateObjectMap_114162f4-e674-43aa-a072-d738bec2001f rr:objectMap _:node197742ba0x7 .
+
+km-dev:TriplesMap_3b375977-7d49-44e3-a8f0-7efc15422ab2 rr:predicateObjectMap km-dev:PredicateObjectMap_114162f4-e674-43aa-a072-d738bec2001f .
+
+km-dev:PredicateObjectMap_114162f4-e674-43aa-a072-d738bec2001f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_114162f4-e674-43aa-a072-d738bec2001f .
+
+km-dev:PredicateObjectMap_02efbd85-315a-45fc-96d2-f1f284000842 rr:predicate vcard:givenName .
+
+_:node197742ba0x8 rr:column "first_name" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap _:node197742ba0x8 .
+
+km-dev:PredicateObjectMap_02efbd85-315a-45fc-96d2-f1f284000842 rr:objectMap _:node197742ba0x8 .
+
+km-dev:TriplesMap_3b375977-7d49-44e3-a8f0-7efc15422ab2 rr:predicateObjectMap km-dev:PredicateObjectMap_02efbd85-315a-45fc-96d2-f1f284000842 .
+
+km-dev:PredicateObjectMap_02efbd85-315a-45fc-96d2-f1f284000842 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_02efbd85-315a-45fc-96d2-f1f284000842 .
+
+km-dev:TriplesMap_deeb7d4b-15ad-4eee-815f-ba634be35196 a rr:TriplesMap .
+
+_:node197742ba0x1 km-dev:hasTriplesMap km-dev:TriplesMap_deeb7d4b-15ad-4eee-815f-ba634be35196 .
+
+km-dev:TriplesMap_deeb7d4b-15ad-4eee-815f-ba634be35196 km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x9 rr:tableName "wakibbe_investigator.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasLogicalTable _:node197742ba0x9 .
+
+km-dev:TriplesMap_deeb7d4b-15ad-4eee-815f-ba634be35196 rr:logicalTable _:node197742ba0x9 ;
+	rr:subjectMap _:node197742ba0x10 .
+
+_:node197742ba0x1 km-dev:hasSubjectMap _:node197742ba0x10 .
+
+_:node197742ba0x10 km-dev:isPartOfMapping _:node197742ba0x1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://xmlns.com/foaf/0.1/Person1" ;
+	rr:class foaf:Person ;
+	rr:template "http://vivo.northwestern.edu/individual/{uuid}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_71207f94-3c9d-4875-8741-c587cae22bb7 rr:predicate vlocal:peopleID .
+
+_:node197742ba0x11 rr:column "uuid" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap _:node197742ba0x11 .
+
+km-dev:PredicateObjectMap_71207f94-3c9d-4875-8741-c587cae22bb7 rr:objectMap _:node197742ba0x11 .
+
+km-dev:TriplesMap_deeb7d4b-15ad-4eee-815f-ba634be35196 rr:predicateObjectMap km-dev:PredicateObjectMap_71207f94-3c9d-4875-8741-c587cae22bb7 .
+
+km-dev:PredicateObjectMap_71207f94-3c9d-4875-8741-c587cae22bb7 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_71207f94-3c9d-4875-8741-c587cae22bb7 .
+
+km-dev:PredicateObjectMap_dedccb05-2e4a-4012-91f3-f0c0be860289 rr:predicate obo:ARG_2000028 .
+
+km-dev:RefObjectMap_092b5c20-bcff-4e80-af9b-74b8130f18ff a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_3b375977-7d49-44e3-a8f0-7efc15422ab2 ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap km-dev:RefObjectMap_092b5c20-bcff-4e80-af9b-74b8130f18ff .
+
+km-dev:PredicateObjectMap_dedccb05-2e4a-4012-91f3-f0c0be860289 rr:objectMap km-dev:RefObjectMap_092b5c20-bcff-4e80-af9b-74b8130f18ff .
+
+km-dev:TriplesMap_deeb7d4b-15ad-4eee-815f-ba634be35196 rr:predicateObjectMap km-dev:PredicateObjectMap_dedccb05-2e4a-4012-91f3-f0c0be860289 .
+
+km-dev:PredicateObjectMap_dedccb05-2e4a-4012-91f3-f0c0be860289 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_dedccb05-2e4a-4012-91f3-f0c0be860289 .
+
+km-dev:PredicateObjectMap_9bdeecd5-982a-4c22-b708-0df80cbd23c6 rr:predicate vivo:freetextKeyword .
+
+_:node197742ba0x12 rr:column "faculty_interests" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap _:node197742ba0x12 .
+
+km-dev:PredicateObjectMap_9bdeecd5-982a-4c22-b708-0df80cbd23c6 rr:objectMap _:node197742ba0x12 .
+
+km-dev:TriplesMap_deeb7d4b-15ad-4eee-815f-ba634be35196 rr:predicateObjectMap km-dev:PredicateObjectMap_9bdeecd5-982a-4c22-b708-0df80cbd23c6 .
+
+km-dev:PredicateObjectMap_9bdeecd5-982a-4c22-b708-0df80cbd23c6 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9bdeecd5-982a-4c22-b708-0df80cbd23c6 .
+
+km-dev:PredicateObjectMap_fa413ee4-1a91-40fa-83c0-09264b1e336a rr:predicate vivo:hrJobTitle .
+
+_:node197742ba0x13 rr:column "title" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap _:node197742ba0x13 .
+
+km-dev:PredicateObjectMap_fa413ee4-1a91-40fa-83c0-09264b1e336a rr:objectMap _:node197742ba0x13 .
+
+km-dev:TriplesMap_deeb7d4b-15ad-4eee-815f-ba634be35196 rr:predicateObjectMap km-dev:PredicateObjectMap_fa413ee4-1a91-40fa-83c0-09264b1e336a .
+
+km-dev:PredicateObjectMap_fa413ee4-1a91-40fa-83c0-09264b1e336a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_fa413ee4-1a91-40fa-83c0-09264b1e336a .
+
+km-dev:PredicateObjectMap_bdc63649-51f2-43bb-8cd4-fa2c81b47c60 rr:predicate vivo:researchOverview .
+
+_:node197742ba0x14 rr:column "faculty_research_summary" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap _:node197742ba0x14 .
+
+km-dev:PredicateObjectMap_bdc63649-51f2-43bb-8cd4-fa2c81b47c60 rr:objectMap _:node197742ba0x14 .
+
+km-dev:TriplesMap_deeb7d4b-15ad-4eee-815f-ba634be35196 rr:predicateObjectMap km-dev:PredicateObjectMap_bdc63649-51f2-43bb-8cd4-fa2c81b47c60 .
+
+km-dev:PredicateObjectMap_bdc63649-51f2-43bb-8cd4-fa2c81b47c60 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_bdc63649-51f2-43bb-8cd4-fa2c81b47c60 .
+
+km-dev:PredicateObjectMap_08d7a248-7766-4cc8-bf07-0ad2d2aac4cf rr:predicate rdfs:label .
+
+_:node197742ba0x15 rr:column "display_name" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasObjectMap _:node197742ba0x15 .
+
+km-dev:PredicateObjectMap_08d7a248-7766-4cc8-bf07-0ad2d2aac4cf rr:objectMap _:node197742ba0x15 .
+
+km-dev:TriplesMap_deeb7d4b-15ad-4eee-815f-ba634be35196 rr:predicateObjectMap km-dev:PredicateObjectMap_08d7a248-7766-4cc8-bf07-0ad2d2aac4cf .
+
+km-dev:PredicateObjectMap_08d7a248-7766-4cc8-bf07-0ad2d2aac4cf a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node197742ba0x1 .
+
+_:node197742ba0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_08d7a248-7766-4cc8-bf07-0ad2d2aac4cf .
