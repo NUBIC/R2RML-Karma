@@ -58,12 +58,12 @@
 @prefix km-dev: <http://isi.edu/integration/karma/dev#> .
 
 _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
-	km-dev:sourceName "subset_comparative_study_abstracts.csv" ;
+	km-dev:sourceName "comparative_study_abstracts.csv" ;
 	km-dev:modelPublicationTime "1423172812533"^^xsd:long ;
 	km-dev:modelVersion "1.7" ;
 	km-dev:hasInputColumns "[[{\"columnName\":\"DOI\"}],[{\"columnName\":\"Pagination (end page)\"}],[{\"columnName\":\"Pagination (start page)\"}],[{\"columnName\":\"abstract\"}],[{\"columnName\":\"Issue\"}],[{\"columnName\":\"pubmedcentral\"}],[{\"columnName\":\"Volume\"}],[{\"columnName\":\"Mesh Terms\"}],[{\"columnName\":\"publication_type\"}],[{\"columnName\":\"Full Authors\"}],[{\"columnName\":\"Publication Date1\"}],[{\"columnName\":\"Title\"}],[{\"columnName\":\"Journal OR Published proceedings\"}],[{\"columnName\":\"ISSN\"}],[{\"columnName\":\"ID\"}],[{\"columnName\":\"uuid\"}],[{\"columnName\":\"pubmed\"}]]" ;
 	km-dev:hasOutputColumns "[[{\"columnName\":\"journal_id\"}],[{\"columnName\":\"publication_uri\"}],[{\"columnName\":\"DOI\"}],[{\"columnName\":\"Pagination (end page)\"}],[{\"columnName\":\"Pagination (start page)\"}],[{\"columnName\":\"abstract\"}],[{\"columnName\":\"Issue\"}],[{\"columnName\":\"pubmedcentral\"}],[{\"columnName\":\"Volume\"}],[{\"columnName\":\"Mesh Terms\"}],[{\"columnName\":\"publication_type\"}],[{\"columnName\":\"Full Authors\"}],[{\"columnName\":\"Publication Date1\"}],[{\"columnName\":\"Title\"}],[{\"columnName\":\"Journal OR Published proceedings\"}],[{\"columnName\":\"ISSN\"}],[{\"columnName\":\"ID\"}],[{\"columnName\":\"pubmed\"}],[{\"columnName\":\"uuid\"}]]" ;
-	km-dev:hasModelLabel "subset_comparative_study_abstracts.csv" ;
+	km-dev:hasModelLabel "comparative_study_abstracts.csv" ;
 	km-dev:hasBaseURI "http://vivo.northwestern.edu/individual/n" ;
 	km-dev:hasWorksheetHistory """[
     {
@@ -1616,7 +1616,7 @@ _:node19ddrbfnlx1 km-dev:hasTriplesMap km-dev:TriplesMap_0596ba2d-266e-4bd0-8a57
 
 km-dev:TriplesMap_0596ba2d-266e-4bd0-8a57-bebd9b5adefa km-dev:isPartOfMapping _:node19ddrbfnlx1 .
 
-_:node19ddrbfnlx2 rr:tableName "subset_comparative_study_abstracts.csv" ;
+_:node19ddrbfnlx2 rr:tableName "comparative_study_abstracts.csv" ;
 	a rr:LogicalTable ;
 	km-dev:isPartOfMapping _:node19ddrbfnlx1 .
 
@@ -1673,7 +1673,7 @@ _:node19ddrbfnlx1 km-dev:hasTriplesMap km-dev:TriplesMap_5c35ed61-7ee2-4fd2-8138
 
 km-dev:TriplesMap_5c35ed61-7ee2-4fd2-8138-9f97f18523f0 km-dev:isPartOfMapping _:node19ddrbfnlx1 .
 
-_:node19ddrbfnlx6 rr:tableName "subset_comparative_study_abstracts.csv" ;
+_:node19ddrbfnlx6 rr:tableName "comparative_study_abstracts.csv" ;
 	a rr:LogicalTable ;
 	km-dev:isPartOfMapping _:node19ddrbfnlx1 .
 
@@ -1935,7 +1935,7 @@ _:node19ddrbfnlx1 km-dev:hasTriplesMap km-dev:TriplesMap_b34d162a-69e9-4324-8bbb
 
 km-dev:TriplesMap_b34d162a-69e9-4324-8bbb-8b4a54fe1757 km-dev:isPartOfMapping _:node19ddrbfnlx1 .
 
-_:node19ddrbfnlx20 rr:tableName "subset_comparative_study_abstracts.csv" ;
+_:node19ddrbfnlx20 rr:tableName "comparative_study_abstracts.csv" ;
 	a rr:LogicalTable ;
 	km-dev:isPartOfMapping _:node19ddrbfnlx1 .
 
