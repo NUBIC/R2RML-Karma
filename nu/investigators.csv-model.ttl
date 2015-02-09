@@ -64,7 +64,7 @@ _:node19b58u9erx1 a km-dev:R2RMLMapping ;
 	km-dev:hasInputColumns "[[{\"columnName\":\"era_commons_name\"}],[{\"columnName\":\"faculty_interests\"}],[{\"columnName\":\"faculty_research_summary\"}],[{\"columnName\":\"degrees\"}],[{\"columnName\":\"display_name\"}],[{\"columnName\":\"first_name\"}],[{\"columnName\":\"last_name\"}],[{\"columnName\":\"title\"}],[{\"columnName\":\"username\"}],[{\"columnName\":\"middle_name\"}],[{\"columnName\":\"email\"}],[{\"columnName\":\"employee_id\"}],[{\"columnName\":\"uuid\"}]]" ;
 	km-dev:hasOutputColumns "[[{\"columnName\":\"era_commons_name\"}],[{\"columnName\":\"faculty_interests\"}],[{\"columnName\":\"faculty_research_summary\"}],[{\"columnName\":\"degrees\"}],[{\"columnName\":\"display_name\"}],[{\"columnName\":\"first_name\"}],[{\"columnName\":\"last_name\"}],[{\"columnName\":\"title\"}],[{\"columnName\":\"username\"}],[{\"columnName\":\"middle_name\"}],[{\"columnName\":\"email\"}],[{\"columnName\":\"employee_id\"}],[{\"columnName\":\"uuid\"}]]" ;
 	km-dev:hasModelLabel "investigators.csv" ;
-	km-dev:hasBaseURI "http://vivo.northwestern.edu/individual/" ;
+	km-dev:hasBaseURI "http://vivo.northwestern.edu/individual/n" ;
 	km-dev:hasWorksheetHistory """[
     {
         \"tags\": [\"Modeling\"],
@@ -143,7 +143,7 @@ _:node19b58u9erx1 a km-dev:R2RMLMapping ;
                     \"hasPrefix\": false,
                     \"graphLabel\": \"\",
                     \"hasBaseURI\": true,
-                    \"baseURI\": \"http://vivo.northwestern.edu/individual/\"
+                    \"baseURI\": \"http://vivo.northwestern.edu/individual/n\"
                 },
                 \"type\": \"other\"
             },
