@@ -57,14 +57,14 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix km-dev: <http://isi.edu/integration/karma/dev#> .
 
-_:node1972ehmk6x1 a km-dev:R2RMLMapping ;
-	km-dev:sourceName "wakibbe_investigator_abstracts.csv" ;
-	km-dev:modelPublicationTime "1416347835014"^^xsd:long ;
+_:node19b5paqm0x1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "investigator_abstracts.csv" ;
+	km-dev:modelPublicationTime "1420754774720"^^xsd:long ;
 	km-dev:modelVersion "1.7" ;
-	km-dev:hasInputColumns "[[{\"columnName\":\"abstract_uuid\"}],[{\"columnName\":\"investigator_uuid\"}]]" ;
-	km-dev:hasOutputColumns "[[{\"columnName\":\"authorship_uri\"}],[{\"columnName\":\"abstract_uuid\"}],[{\"columnName\":\"investigator_uuid\"}]]" ;
-	km-dev:hasModelLabel "wakibbe_investigator_abstracts.csv" ;
-	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"investigator_uuid\"}],[{\"columnName\":\"abstract_uuid\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"authorship_uri\"}],[{\"columnName\":\"investigator_uuid\"}],[{\"columnName\":\"abstract_uuid\"}]]" ;
+	km-dev:hasModelLabel "investigator_abstracts.csv" ;
+	km-dev:hasBaseURI "http://vivo.northwestern.edu/individual/n" ;
 	km-dev:hasWorksheetHistory """[
     {
         \"tags\": [\"Modeling\"],
@@ -317,7 +317,7 @@ _:node1972ehmk6x1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"inputColumns\",
-                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"abstract_uuid\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"investigator_uuid\\\"}]}]\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"investigator_uuid\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"abstract_uuid\\\"}]}]\",
                 \"type\": \"hNodeIdList\"
             },
             {
@@ -399,143 +399,280 @@ _:node1972ehmk6x1 a km-dev:R2RMLMapping ;
             }
         ],
         \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"abstract_uuid\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://purl.org/ontology/bibo/AcademicArticle\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"bibo:AcademicArticle1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AcademicArticle\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"abstract_uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"abstract_uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"investigator_uuid\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://vivoweb.org/ontology/core#FacultyMember\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://vivoweb.org/ontology/core#FacultyMember1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"vivo:FacultyMember1\",
+                    \"DomainId\": \"http://vivoweb.org/ontology/core#FacultyMember1\",
+                    \"DomainUri\": \"http://vivoweb.org/ontology/core#FacultyMember\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"investigator_uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"investigator_uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://vivo.northwestern.edu/individual/n\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
     }
 ]""" .
 
-km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 a rr:TriplesMap .
+km-dev:TriplesMap_86662a3b-8aa6-4a0d-ada7-406039681434 a rr:TriplesMap .
 
-_:node1972ehmk6x1 km-dev:hasTriplesMap km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 .
+_:node19b5paqm0x1 km-dev:hasTriplesMap km-dev:TriplesMap_86662a3b-8aa6-4a0d-ada7-406039681434 .
 
-km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 km-dev:isPartOfMapping _:node1972ehmk6x1 .
+km-dev:TriplesMap_86662a3b-8aa6-4a0d-ada7-406039681434 km-dev:isPartOfMapping _:node19b5paqm0x1 .
 
-_:node1972ehmk6x2 rr:tableName "wakibbe_investigator_abstracts.csv" ;
+_:node19b5paqm0x2 rr:tableName "investigator_abstracts.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+	km-dev:isPartOfMapping _:node19b5paqm0x1 .
 
-_:node1972ehmk6x1 km-dev:hasLogicalTable _:node1972ehmk6x2 .
+_:node19b5paqm0x1 km-dev:hasLogicalTable _:node19b5paqm0x2 .
 
-km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 rr:logicalTable _:node1972ehmk6x2 ;
-	rr:subjectMap _:node1972ehmk6x3 .
+km-dev:TriplesMap_86662a3b-8aa6-4a0d-ada7-406039681434 rr:logicalTable _:node19b5paqm0x2 ;
+	rr:subjectMap _:node19b5paqm0x3 .
 
-_:node1972ehmk6x1 km-dev:hasSubjectMap _:node1972ehmk6x3 .
+_:node19b5paqm0x1 km-dev:hasSubjectMap _:node19b5paqm0x3 .
 
-_:node1972ehmk6x3 km-dev:isPartOfMapping _:node1972ehmk6x1 ;
+_:node19b5paqm0x3 km-dev:isPartOfMapping _:node19b5paqm0x1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://purl.org/ontology/bibo/AcademicArticle1" ;
 	rr:class bibo:AcademicArticle ;
-	rr:template "http://localhost:8080/source/{abstract_uuid}" .
+	rr:template "{abstract_uuid}" .
 
-km-dev:PredicateObjectMap_33545002-4646-4547-b153-030c332e93f1 rr:predicate vlocal:abstractID .
+km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 a rr:TriplesMap .
 
-_:node1972ehmk6x4 rr:column "abstract_uuid" ;
-	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+_:node19b5paqm0x1 km-dev:hasTriplesMap km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 .
 
-_:node1972ehmk6x1 km-dev:hasObjectMap _:node1972ehmk6x4 .
+km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 km-dev:isPartOfMapping _:node19b5paqm0x1 .
 
-km-dev:PredicateObjectMap_33545002-4646-4547-b153-030c332e93f1 rr:objectMap _:node1972ehmk6x4 .
-
-km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 rr:predicateObjectMap km-dev:PredicateObjectMap_33545002-4646-4547-b153-030c332e93f1 .
-
-km-dev:PredicateObjectMap_33545002-4646-4547-b153-030c332e93f1 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
-
-_:node1972ehmk6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_33545002-4646-4547-b153-030c332e93f1 .
-
-km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 a rr:TriplesMap .
-
-_:node1972ehmk6x1 km-dev:hasTriplesMap km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 .
-
-km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 km-dev:isPartOfMapping _:node1972ehmk6x1 .
-
-_:node1972ehmk6x5 rr:tableName "wakibbe_investigator_abstracts.csv" ;
+_:node19b5paqm0x4 rr:tableName "investigator_abstracts.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+	km-dev:isPartOfMapping _:node19b5paqm0x1 .
 
-_:node1972ehmk6x1 km-dev:hasLogicalTable _:node1972ehmk6x5 .
+_:node19b5paqm0x1 km-dev:hasLogicalTable _:node19b5paqm0x4 .
 
-km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 rr:logicalTable _:node1972ehmk6x5 ;
-	rr:subjectMap _:node1972ehmk6x6 .
+km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 rr:logicalTable _:node19b5paqm0x4 ;
+	rr:subjectMap _:node19b5paqm0x5 .
 
-_:node1972ehmk6x1 km-dev:hasSubjectMap _:node1972ehmk6x6 .
+_:node19b5paqm0x1 km-dev:hasSubjectMap _:node19b5paqm0x5 .
 
-_:node1972ehmk6x6 km-dev:isPartOfMapping _:node1972ehmk6x1 ;
+_:node19b5paqm0x5 km-dev:isPartOfMapping _:node19b5paqm0x1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://vivoweb.org/ontology/core#Authorship1" ;
 	rr:class vivo:Authorship ;
 	rr:template "http://vivo.northwestern.edu/authorship/{investigator_uuid}_{abstract_uuid}" ;
 	a km-dev:steinerTreeRootNode .
 
-km-dev:PredicateObjectMap_186814f8-5c2a-4fa9-af23-6c03f9f26e02 rr:predicate vivo:relates .
+km-dev:PredicateObjectMap_83936ac3-27d3-4c82-a739-e2577169216c rr:predicate vivo:relates .
 
-km-dev:RefObjectMap_87ea246d-8f6f-489e-9e6b-6b05d74c850d a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_9b7023a6-6335-438e-acf5-cd98b9d17cc7 ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+km-dev:RefObjectMap_9e61eb5b-670b-4f39-ab0d-c29c5605c382 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_86662a3b-8aa6-4a0d-ada7-406039681434 ;
+	km-dev:isPartOfMapping _:node19b5paqm0x1 .
 
-_:node1972ehmk6x1 km-dev:hasObjectMap km-dev:RefObjectMap_87ea246d-8f6f-489e-9e6b-6b05d74c850d .
+_:node19b5paqm0x1 km-dev:hasObjectMap km-dev:RefObjectMap_9e61eb5b-670b-4f39-ab0d-c29c5605c382 .
 
-km-dev:PredicateObjectMap_186814f8-5c2a-4fa9-af23-6c03f9f26e02 rr:objectMap km-dev:RefObjectMap_87ea246d-8f6f-489e-9e6b-6b05d74c850d .
+km-dev:PredicateObjectMap_83936ac3-27d3-4c82-a739-e2577169216c rr:objectMap km-dev:RefObjectMap_9e61eb5b-670b-4f39-ab0d-c29c5605c382 .
 
-km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 rr:predicateObjectMap km-dev:PredicateObjectMap_186814f8-5c2a-4fa9-af23-6c03f9f26e02 .
+km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 rr:predicateObjectMap km-dev:PredicateObjectMap_83936ac3-27d3-4c82-a739-e2577169216c .
 
-km-dev:PredicateObjectMap_186814f8-5c2a-4fa9-af23-6c03f9f26e02 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+km-dev:PredicateObjectMap_83936ac3-27d3-4c82-a739-e2577169216c a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19b5paqm0x1 .
 
-_:node1972ehmk6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_186814f8-5c2a-4fa9-af23-6c03f9f26e02 .
+_:node19b5paqm0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_83936ac3-27d3-4c82-a739-e2577169216c .
 
-km-dev:PredicateObjectMap_11d44d76-d072-4aa7-9468-17104fb89708 rr:predicate vivo:relates .
+km-dev:PredicateObjectMap_44b9b673-9983-45c7-88f1-c1cfc92c4309 rr:predicate vivo:relates .
 
-km-dev:RefObjectMap_5f90c3b7-cc09-4911-a418-1b8a09484936 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+km-dev:RefObjectMap_308d7df4-96ac-4e35-8f79-55f5839843aa a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_d524bff6-0434-4deb-b606-3453cf72b920 ;
+	km-dev:isPartOfMapping _:node19b5paqm0x1 .
 
-_:node1972ehmk6x1 km-dev:hasObjectMap km-dev:RefObjectMap_5f90c3b7-cc09-4911-a418-1b8a09484936 .
+_:node19b5paqm0x1 km-dev:hasObjectMap km-dev:RefObjectMap_308d7df4-96ac-4e35-8f79-55f5839843aa .
 
-km-dev:PredicateObjectMap_11d44d76-d072-4aa7-9468-17104fb89708 rr:objectMap km-dev:RefObjectMap_5f90c3b7-cc09-4911-a418-1b8a09484936 .
+km-dev:PredicateObjectMap_44b9b673-9983-45c7-88f1-c1cfc92c4309 rr:objectMap km-dev:RefObjectMap_308d7df4-96ac-4e35-8f79-55f5839843aa .
 
-km-dev:TriplesMap_712261ed-03d4-4359-a376-4fb0f7c0a5d9 rr:predicateObjectMap km-dev:PredicateObjectMap_11d44d76-d072-4aa7-9468-17104fb89708 .
+km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 rr:predicateObjectMap km-dev:PredicateObjectMap_44b9b673-9983-45c7-88f1-c1cfc92c4309 .
 
-km-dev:PredicateObjectMap_11d44d76-d072-4aa7-9468-17104fb89708 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+km-dev:PredicateObjectMap_44b9b673-9983-45c7-88f1-c1cfc92c4309 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19b5paqm0x1 .
 
-_:node1972ehmk6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_11d44d76-d072-4aa7-9468-17104fb89708 .
+_:node19b5paqm0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_44b9b673-9983-45c7-88f1-c1cfc92c4309 .
 
-km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 a rr:TriplesMap .
+km-dev:TriplesMap_d524bff6-0434-4deb-b606-3453cf72b920 a rr:TriplesMap .
 
-_:node1972ehmk6x1 km-dev:hasTriplesMap km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 .
+_:node19b5paqm0x1 km-dev:hasTriplesMap km-dev:TriplesMap_d524bff6-0434-4deb-b606-3453cf72b920 .
 
-km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 km-dev:isPartOfMapping _:node1972ehmk6x1 .
+km-dev:TriplesMap_d524bff6-0434-4deb-b606-3453cf72b920 km-dev:isPartOfMapping _:node19b5paqm0x1 .
 
-_:node1972ehmk6x7 rr:tableName "wakibbe_investigator_abstracts.csv" ;
+_:node19b5paqm0x6 rr:tableName "investigator_abstracts.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
+	km-dev:isPartOfMapping _:node19b5paqm0x1 .
 
-_:node1972ehmk6x1 km-dev:hasLogicalTable _:node1972ehmk6x7 .
+_:node19b5paqm0x1 km-dev:hasLogicalTable _:node19b5paqm0x6 .
 
-km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 rr:logicalTable _:node1972ehmk6x7 ;
-	rr:subjectMap _:node1972ehmk6x8 .
+km-dev:TriplesMap_d524bff6-0434-4deb-b606-3453cf72b920 rr:logicalTable _:node19b5paqm0x6 ;
+	rr:subjectMap _:node19b5paqm0x7 .
 
-_:node1972ehmk6x1 km-dev:hasSubjectMap _:node1972ehmk6x8 .
+_:node19b5paqm0x1 km-dev:hasSubjectMap _:node19b5paqm0x7 .
 
-_:node1972ehmk6x8 km-dev:isPartOfMapping _:node1972ehmk6x1 ;
+_:node19b5paqm0x7 km-dev:isPartOfMapping _:node19b5paqm0x1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://vivoweb.org/ontology/core#FacultyMember1" ;
 	rr:class vivo:FacultyMember ;
-	rr:template "http://localhost:8080/source/{investigator_uuid}" .
-
-km-dev:PredicateObjectMap_3b3554b1-63ed-4349-a3fb-8a293dda672d rr:predicate vlocal:peopleID .
-
-_:node1972ehmk6x9 rr:column "investigator_uuid" ;
-	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
-
-_:node1972ehmk6x1 km-dev:hasObjectMap _:node1972ehmk6x9 .
-
-km-dev:PredicateObjectMap_3b3554b1-63ed-4349-a3fb-8a293dda672d rr:objectMap _:node1972ehmk6x9 .
-
-km-dev:TriplesMap_ec18b78b-41b5-4618-b288-fa2ca14914e7 rr:predicateObjectMap km-dev:PredicateObjectMap_3b3554b1-63ed-4349-a3fb-8a293dda672d .
-
-km-dev:PredicateObjectMap_3b3554b1-63ed-4349-a3fb-8a293dda672d a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1972ehmk6x1 .
-
-_:node1972ehmk6x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3b3554b1-63ed-4349-a3fb-8a293dda672d .
+	rr:template "{investigator_uuid}" .
