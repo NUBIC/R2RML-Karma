@@ -36,7 +36,7 @@ Note: bold and italic attributes are pyTransformed attributes - not from the dat
 
 * abstracts
   * AcademicArticle/Article/ClinicalTrial/Comment/ComparativeStudy/EvaluationStudy/Letter
-    * uuid (internal unique identifier for abstracts table)
+    * uuid _(internal unique identifier for abstracts table)_
       * uri
     * Title
       * rdfs:label
@@ -76,7 +76,7 @@ Note: bold and italic attributes are pyTransformed attributes - not from the dat
       * uri
 * organizational_units
   * Center/Division/Department
-    * uuid (internal unique identifier for organizational_units table)
+    * uuid _(internal unique identifier for organizational_units table)_
       * uri
     * department_id
       * vlocal:DepartmentID
@@ -90,7 +90,7 @@ Note: bold and italic attributes are pyTransformed attributes - not from the dat
       * vcard:url
 * investigators
   * FacultyMember
-    * uuid (internal unique identifier for investigators table)
+    * uuid _(internal unique identifier for investigators table)_
       * uri
     * degrees
       * vcard:honorificSuffix
@@ -123,18 +123,18 @@ Note: bold and italic attributes are pyTransformed attributes - not from the dat
     * **_position_uri_**
       * uri
   * FacultyMember
-    * investigator_uuid (internal unique identifier for investigators table)
+    * investigator_uuid _(internal unique identifier for investigators table)_
       * uri
   * Organization
-    * organizational_unit_uuid (internal unique identifier for organizational_units table)
+    * organizational_unit_uuid _(internal unique identifier for organizational_units table)_
       * uri
 * investigator_abstracts
   * Authorship
     * **_authorship_uri_**
       * uri
   * FacultyMember
-    * investigator_uuid (internal unique identifier for investigators table)
+    * investigator_uuid _(internal unique identifier for investigators table)_
       * uri
   * AcademicArticle (this should probably be Article - the superclass)
-    * abstract_uuid (internal unique identifier for abstracts table)
+    * abstract_uuid _(internal unique identifier for abstracts table)_
       * uri
