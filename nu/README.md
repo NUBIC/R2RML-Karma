@@ -36,7 +36,7 @@ Note: bold and italic attributes are pyTransformed attributes - not from the dat
 
 * abstracts
   * AcademicArticle/Article/ClinicalTrial/Comment/ComparativeStudy/EvaluationStudy/Letter
-    * uuid
+    * uuid (internal unique identifier for abstracts table)
       * uri
     * Title
       * rdfs:label
@@ -66,7 +66,7 @@ Note: bold and italic attributes are pyTransformed attributes - not from the dat
     * Journal OR Published proceedings
       * rdfs:label
     * ISSN
-      * biob:issn
+      * bibo:issn
     * **_journal_id_**
       * uri 
   * DateTimeValue
@@ -76,7 +76,7 @@ Note: bold and italic attributes are pyTransformed attributes - not from the dat
       * uri
 * organizational_units
   * Center/Division/Department
-    * uuid
+    * uuid (internal unique identifier for organizational_units table)
       * uri
     * department_id
       * vlocal:DepartmentID
@@ -90,7 +90,7 @@ Note: bold and italic attributes are pyTransformed attributes - not from the dat
       * vcard:url
 * investigators
   * FacultyMember
-    * uuid
+    * uuid (internal unique identifier for investigators table)
       * uri
     * degrees
       * vcard:honorificSuffix
@@ -123,18 +123,18 @@ Note: bold and italic attributes are pyTransformed attributes - not from the dat
     * **_position_uri_**
       * uri
   * FacultyMember
-    * investigator_uuid
+    * investigator_uuid (internal unique identifier for investigators table)
       * uri
   * Organization
-    * organizational_unit_uuid
+    * organizational_unit_uuid (internal unique identifier for organizational_units table)
       * uri
 * investigator_abstracts
   * Authorship
     * **_authorship_uri_**
       * uri
   * FacultyMember
-    * investigator_uuid
+    * investigator_uuid (internal unique identifier for investigators table)
       * uri
   * AcademicArticle (this should probably be Article - the superclass)
-    * abstract_uuid
+    * abstract_uuid (internal unique identifier for abstracts table)
       * uri
