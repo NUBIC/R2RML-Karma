@@ -146,9 +146,9 @@ _:node19b5paqm0x1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://localhost/vivo/ontology/vivo-local#abstractID\",
-                    \"DomainLabel\": \"bibo:AcademicArticle1 (add)\",
-                    \"DomainId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
-                    \"DomainUri\": \"http://purl.org/ontology/bibo/AcademicArticle\"
+                    \"DomainLabel\": \"bibo:Article1 (add)\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/Article1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/Article\"
                 }],
                 \"type\": \"other\"
             },
@@ -197,7 +197,7 @@ _:node19b5paqm0x1 a km-dev:R2RMLMapping ;
                 \"name\": \"initialEdges\",
                 \"value\": [{
                     \"edgeId\": \"http://xmlns.com/foaf/0.1/topic_interest\",
-                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
+                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/Article1\",
                     \"edgeSourceId\": \"http://vivoweb.org/ontology/core#FacultyMember1\"
                 }],
                 \"type\": \"other\"
@@ -248,7 +248,7 @@ _:node19b5paqm0x1 a km-dev:R2RMLMapping ;
                 \"name\": \"initialEdges\",
                 \"value\": [{
                     \"edgeId\": \"http://xmlns.com/foaf/0.1/topic_interest\",
-                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
+                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/Article1\",
                     \"edgeSourceId\": \"http://vivoweb.org/ontology/core#FacultyMember1\"
                 }],
                 \"type\": \"other\"
@@ -261,9 +261,9 @@ _:node19b5paqm0x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"newEdges\",
                 \"value\": [{
-                    \"edgeTargetUri\": \"http://purl.org/ontology/bibo/AcademicArticle\",
+                    \"edgeTargetUri\": \"http://purl.org/ontology/bibo/Article\",
                     \"edgeId\": \"http://vivoweb.org/ontology/core#relates\",
-                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
+                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/Article1\",
                     \"edgeSourceId\": \"http://vivoweb.org/ontology/core#Authorship1\",
                     \"edgeSourceUri\": \"http://vivoweb.org/ontology/core#Authorship\"
                 }],
@@ -425,12 +425,12 @@ _:node19b5paqm0x1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://purl.org/ontology/bibo/AcademicArticle\",
+                \"value\": \"http://purl.org/ontology/bibo/Article\",
                 \"type\": \"other\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
+                \"value\": \"http://purl.org/ontology/bibo/Article1\",
                 \"type\": \"other\"
             },
             {
@@ -438,9 +438,9 @@ _:node19b5paqm0x1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"bibo:AcademicArticle1\",
-                    \"DomainId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
-                    \"DomainUri\": \"http://purl.org/ontology/bibo/AcademicArticle\"
+                    \"DomainLabel\": \"bibo:Article1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/Article1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/Article\"
                 }],
                 \"type\": \"other\"
             },
@@ -592,8 +592,8 @@ _:node19b5paqm0x1 km-dev:hasSubjectMap _:node19b5paqm0x3 .
 
 _:node19b5paqm0x3 km-dev:isPartOfMapping _:node19b5paqm0x1 ;
 	a rr:SubjectMap ;
-	km-dev:alignmentNodeId "http://purl.org/ontology/bibo/AcademicArticle1" ;
-	rr:class bibo:AcademicArticle ;
+	km-dev:alignmentNodeId "http://purl.org/ontology/bibo/Article1" ;
+	rr:class bibo:Article ;
 	rr:template "{abstract_uuid}" .
 
 km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 a rr:TriplesMap .
