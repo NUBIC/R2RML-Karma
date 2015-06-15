@@ -13,6 +13,7 @@
 @prefix aktp: <http://www.aktors.org/ontology/portal#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
+@prefix vlocal: <http://vivo.northwestern.edu/ontology/vlocal#> .
 @prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
 @prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
 @prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
@@ -43,7 +44,6 @@
 @prefix geo: <http://aims.fao.org/aos/geopolitical.owl#> .
 @prefix app: <http://eagle-i.org/ont/app/1.0/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vlocal: <http://localhost/vivo/ontology/vivo-local#> .
 @prefix wot: <http://xmlns.com/wot/0.1/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
@@ -57,9 +57,9 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix km-dev: <http://isi.edu/integration/karma/dev#> .
 
-_:node19b5paqm0x1 a km-dev:R2RMLMapping ;
+_:node19mo5ar7kx1 a km-dev:R2RMLMapping ;
 	km-dev:sourceName "investigator_abstracts.csv" ;
-	km-dev:modelPublicationTime "1420754774720"^^xsd:long ;
+	km-dev:modelPublicationTime "1433182498036"^^xsd:long ;
 	km-dev:modelVersion "1.7" ;
 	km-dev:hasInputColumns "[[{\"columnName\":\"investigator_uuid\"}],[{\"columnName\":\"abstract_uuid\"}]]" ;
 	km-dev:hasOutputColumns "[[{\"columnName\":\"authorship_uri\"}],[{\"columnName\":\"investigator_uuid\"}],[{\"columnName\":\"abstract_uuid\"}]]" ;
@@ -570,108 +570,159 @@ _:node19b5paqm0x1 a km-dev:R2RMLMapping ;
             }
         ],
         \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://vivoweb.org/ontology/core#relates\",
+                    \"edgeTargetId\": \"http://vivoweb.org/ontology/core#FacultyMember2\",
+                    \"edgeSourceId\": \"http://vivoweb.org/ontology/core#Authorship1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS1360376AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://vivoweb.org/ontology/core#FacultyMember\",
+                    \"edgeId\": \"http://vivoweb.org/ontology/core#relates\",
+                    \"edgeTargetId\": \"http://vivoweb.org/ontology/core#FacultyMember1\",
+                    \"edgeSourceId\": \"http://vivoweb.org/ontology/core#Authorship1\",
+                    \"edgeSourceUri\": \"http://vivoweb.org/ontology/core#Authorship1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
     }
 ]""" .
 
-km-dev:TriplesMap_86662a3b-8aa6-4a0d-ada7-406039681434 a rr:TriplesMap .
+km-dev:TriplesMap_27a017d9-cacc-4086-8188-1858174644be a rr:TriplesMap .
 
-_:node19b5paqm0x1 km-dev:hasTriplesMap km-dev:TriplesMap_86662a3b-8aa6-4a0d-ada7-406039681434 .
+_:node19mo5ar7kx1 km-dev:hasTriplesMap km-dev:TriplesMap_27a017d9-cacc-4086-8188-1858174644be .
 
-km-dev:TriplesMap_86662a3b-8aa6-4a0d-ada7-406039681434 km-dev:isPartOfMapping _:node19b5paqm0x1 .
+km-dev:TriplesMap_27a017d9-cacc-4086-8188-1858174644be km-dev:isPartOfMapping _:node19mo5ar7kx1 .
 
-_:node19b5paqm0x2 rr:tableName "investigator_abstracts.csv" ;
+_:node19mo5ar7kx2 rr:tableName "investigator_abstracts.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node19b5paqm0x1 .
+	km-dev:isPartOfMapping _:node19mo5ar7kx1 .
 
-_:node19b5paqm0x1 km-dev:hasLogicalTable _:node19b5paqm0x2 .
+_:node19mo5ar7kx1 km-dev:hasLogicalTable _:node19mo5ar7kx2 .
 
-km-dev:TriplesMap_86662a3b-8aa6-4a0d-ada7-406039681434 rr:logicalTable _:node19b5paqm0x2 ;
-	rr:subjectMap _:node19b5paqm0x3 .
+km-dev:TriplesMap_27a017d9-cacc-4086-8188-1858174644be rr:logicalTable _:node19mo5ar7kx2 ;
+	rr:subjectMap _:node19mo5ar7kx3 .
 
-_:node19b5paqm0x1 km-dev:hasSubjectMap _:node19b5paqm0x3 .
+_:node19mo5ar7kx1 km-dev:hasSubjectMap _:node19mo5ar7kx3 .
 
-_:node19b5paqm0x3 km-dev:isPartOfMapping _:node19b5paqm0x1 ;
+_:node19mo5ar7kx3 km-dev:isPartOfMapping _:node19mo5ar7kx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://purl.org/ontology/bibo/Article1" ;
 	rr:class bibo:Article ;
 	rr:template "{abstract_uuid}" .
 
-km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 a rr:TriplesMap .
+km-dev:TriplesMap_a9ff91d2-73af-4eb6-9c06-bed662970af2 a rr:TriplesMap .
 
-_:node19b5paqm0x1 km-dev:hasTriplesMap km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 .
+_:node19mo5ar7kx1 km-dev:hasTriplesMap km-dev:TriplesMap_a9ff91d2-73af-4eb6-9c06-bed662970af2 .
 
-km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 km-dev:isPartOfMapping _:node19b5paqm0x1 .
+km-dev:TriplesMap_a9ff91d2-73af-4eb6-9c06-bed662970af2 km-dev:isPartOfMapping _:node19mo5ar7kx1 .
 
-_:node19b5paqm0x4 rr:tableName "investigator_abstracts.csv" ;
+_:node19mo5ar7kx4 rr:tableName "investigator_abstracts.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node19b5paqm0x1 .
+	km-dev:isPartOfMapping _:node19mo5ar7kx1 .
 
-_:node19b5paqm0x1 km-dev:hasLogicalTable _:node19b5paqm0x4 .
+_:node19mo5ar7kx1 km-dev:hasLogicalTable _:node19mo5ar7kx4 .
 
-km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 rr:logicalTable _:node19b5paqm0x4 ;
-	rr:subjectMap _:node19b5paqm0x5 .
+km-dev:TriplesMap_a9ff91d2-73af-4eb6-9c06-bed662970af2 rr:logicalTable _:node19mo5ar7kx4 ;
+	rr:subjectMap _:node19mo5ar7kx5 .
 
-_:node19b5paqm0x1 km-dev:hasSubjectMap _:node19b5paqm0x5 .
+_:node19mo5ar7kx1 km-dev:hasSubjectMap _:node19mo5ar7kx5 .
 
-_:node19b5paqm0x5 km-dev:isPartOfMapping _:node19b5paqm0x1 ;
+_:node19mo5ar7kx5 km-dev:isPartOfMapping _:node19mo5ar7kx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://vivoweb.org/ontology/core#Authorship1" ;
 	rr:class vivo:Authorship ;
 	rr:template "http://vivo.northwestern.edu/authorship/{investigator_uuid}_{abstract_uuid}" ;
 	a km-dev:steinerTreeRootNode .
 
-km-dev:PredicateObjectMap_83936ac3-27d3-4c82-a739-e2577169216c rr:predicate vivo:relates .
+km-dev:PredicateObjectMap_dc6b90b5-0593-4a92-80a8-b1b89afc2c94 rr:predicate vivo:relates .
 
-km-dev:RefObjectMap_9e61eb5b-670b-4f39-ab0d-c29c5605c382 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_86662a3b-8aa6-4a0d-ada7-406039681434 ;
-	km-dev:isPartOfMapping _:node19b5paqm0x1 .
+km-dev:RefObjectMap_a5e26737-b1cb-474b-a2dc-d047b58a64f5 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_27a017d9-cacc-4086-8188-1858174644be ;
+	km-dev:isPartOfMapping _:node19mo5ar7kx1 .
 
-_:node19b5paqm0x1 km-dev:hasObjectMap km-dev:RefObjectMap_9e61eb5b-670b-4f39-ab0d-c29c5605c382 .
+_:node19mo5ar7kx1 km-dev:hasObjectMap km-dev:RefObjectMap_a5e26737-b1cb-474b-a2dc-d047b58a64f5 .
 
-km-dev:PredicateObjectMap_83936ac3-27d3-4c82-a739-e2577169216c rr:objectMap km-dev:RefObjectMap_9e61eb5b-670b-4f39-ab0d-c29c5605c382 .
+km-dev:PredicateObjectMap_dc6b90b5-0593-4a92-80a8-b1b89afc2c94 rr:objectMap km-dev:RefObjectMap_a5e26737-b1cb-474b-a2dc-d047b58a64f5 .
 
-km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 rr:predicateObjectMap km-dev:PredicateObjectMap_83936ac3-27d3-4c82-a739-e2577169216c .
+km-dev:TriplesMap_a9ff91d2-73af-4eb6-9c06-bed662970af2 rr:predicateObjectMap km-dev:PredicateObjectMap_dc6b90b5-0593-4a92-80a8-b1b89afc2c94 .
 
-km-dev:PredicateObjectMap_83936ac3-27d3-4c82-a739-e2577169216c a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node19b5paqm0x1 .
+km-dev:PredicateObjectMap_dc6b90b5-0593-4a92-80a8-b1b89afc2c94 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19mo5ar7kx1 .
 
-_:node19b5paqm0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_83936ac3-27d3-4c82-a739-e2577169216c .
+_:node19mo5ar7kx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_dc6b90b5-0593-4a92-80a8-b1b89afc2c94 .
 
-km-dev:PredicateObjectMap_44b9b673-9983-45c7-88f1-c1cfc92c4309 rr:predicate vivo:relates .
+km-dev:PredicateObjectMap_02736fd5-b5a5-4824-9bf9-ed3186ab82fa rr:predicate vivo:relates .
 
-km-dev:RefObjectMap_308d7df4-96ac-4e35-8f79-55f5839843aa a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_d524bff6-0434-4deb-b606-3453cf72b920 ;
-	km-dev:isPartOfMapping _:node19b5paqm0x1 .
+km-dev:RefObjectMap_13978d26-6ce4-48b4-84a5-6b3bd89ee121 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_7978afe7-3098-4db3-973d-beccf311635a ;
+	km-dev:isPartOfMapping _:node19mo5ar7kx1 .
 
-_:node19b5paqm0x1 km-dev:hasObjectMap km-dev:RefObjectMap_308d7df4-96ac-4e35-8f79-55f5839843aa .
+_:node19mo5ar7kx1 km-dev:hasObjectMap km-dev:RefObjectMap_13978d26-6ce4-48b4-84a5-6b3bd89ee121 .
 
-km-dev:PredicateObjectMap_44b9b673-9983-45c7-88f1-c1cfc92c4309 rr:objectMap km-dev:RefObjectMap_308d7df4-96ac-4e35-8f79-55f5839843aa .
+km-dev:PredicateObjectMap_02736fd5-b5a5-4824-9bf9-ed3186ab82fa rr:objectMap km-dev:RefObjectMap_13978d26-6ce4-48b4-84a5-6b3bd89ee121 .
 
-km-dev:TriplesMap_26eed4e1-d153-4ab3-a453-4b4cdf8933a3 rr:predicateObjectMap km-dev:PredicateObjectMap_44b9b673-9983-45c7-88f1-c1cfc92c4309 .
+km-dev:TriplesMap_a9ff91d2-73af-4eb6-9c06-bed662970af2 rr:predicateObjectMap km-dev:PredicateObjectMap_02736fd5-b5a5-4824-9bf9-ed3186ab82fa .
 
-km-dev:PredicateObjectMap_44b9b673-9983-45c7-88f1-c1cfc92c4309 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node19b5paqm0x1 .
+km-dev:PredicateObjectMap_02736fd5-b5a5-4824-9bf9-ed3186ab82fa a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19mo5ar7kx1 .
 
-_:node19b5paqm0x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_44b9b673-9983-45c7-88f1-c1cfc92c4309 .
+_:node19mo5ar7kx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_02736fd5-b5a5-4824-9bf9-ed3186ab82fa .
 
-km-dev:TriplesMap_d524bff6-0434-4deb-b606-3453cf72b920 a rr:TriplesMap .
+km-dev:TriplesMap_7978afe7-3098-4db3-973d-beccf311635a a rr:TriplesMap .
 
-_:node19b5paqm0x1 km-dev:hasTriplesMap km-dev:TriplesMap_d524bff6-0434-4deb-b606-3453cf72b920 .
+_:node19mo5ar7kx1 km-dev:hasTriplesMap km-dev:TriplesMap_7978afe7-3098-4db3-973d-beccf311635a .
 
-km-dev:TriplesMap_d524bff6-0434-4deb-b606-3453cf72b920 km-dev:isPartOfMapping _:node19b5paqm0x1 .
+km-dev:TriplesMap_7978afe7-3098-4db3-973d-beccf311635a km-dev:isPartOfMapping _:node19mo5ar7kx1 .
 
-_:node19b5paqm0x6 rr:tableName "investigator_abstracts.csv" ;
+_:node19mo5ar7kx6 rr:tableName "investigator_abstracts.csv" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node19b5paqm0x1 .
+	km-dev:isPartOfMapping _:node19mo5ar7kx1 .
 
-_:node19b5paqm0x1 km-dev:hasLogicalTable _:node19b5paqm0x6 .
+_:node19mo5ar7kx1 km-dev:hasLogicalTable _:node19mo5ar7kx6 .
 
-km-dev:TriplesMap_d524bff6-0434-4deb-b606-3453cf72b920 rr:logicalTable _:node19b5paqm0x6 ;
-	rr:subjectMap _:node19b5paqm0x7 .
+km-dev:TriplesMap_7978afe7-3098-4db3-973d-beccf311635a rr:logicalTable _:node19mo5ar7kx6 ;
+	rr:subjectMap _:node19mo5ar7kx7 .
 
-_:node19b5paqm0x1 km-dev:hasSubjectMap _:node19b5paqm0x7 .
+_:node19mo5ar7kx1 km-dev:hasSubjectMap _:node19mo5ar7kx7 .
 
-_:node19b5paqm0x7 km-dev:isPartOfMapping _:node19b5paqm0x1 ;
+_:node19mo5ar7kx7 km-dev:isPartOfMapping _:node19mo5ar7kx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://vivoweb.org/ontology/core#FacultyMember1" ;
 	rr:class vivo:FacultyMember ;
