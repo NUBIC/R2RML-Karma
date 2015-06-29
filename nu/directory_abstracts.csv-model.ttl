@@ -13,7 +13,8 @@
 @prefix aktp: <http://www.aktors.org/ontology/portal#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
-@prefix vlocal: <http://vivo.northwestern.edu/ontology/vlocal#> .
+@prefix vlocalclass: <http://vivo.northwestern.edu/ontology/vlocal/class#> .
+@prefix vlocalproperty: <http://vivo.northwestern.edu/ontology/vlocal/property#> .
 @prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
 @prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
 @prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
@@ -91,12 +92,12 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\",
+                \"value\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\",
                 \"type\": \"other\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1 (add)\",
+                \"value\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1 (add)\",
                 \"type\": \"other\"
             },
             {
@@ -104,9 +105,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"vlocal:Directory1 (add)\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1 (add)\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -213,8 +214,8 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                     \"edgeTargetUri\": \"http://vivoweb.org/ontology/core#DateTimeValue\",
                     \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimeValue\",
                     \"edgeTargetId\": \"http://vivoweb.org/ontology/core#DateTimeValue1 (add)\",
-                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"edgeSourceUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\"
+                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"edgeSourceUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\"
                 }],
                 \"type\": \"other\"
             },
@@ -530,7 +531,7 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                     {
                         \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimeValue\",
                         \"edgeTargetId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
-                        \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\"
+                        \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\"
                     },
                     {
                         \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimePrecision\",
@@ -552,8 +553,8 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                         \"edgeTargetUri\": \"http://vivoweb.org/ontology/core#DateTimeValue\",
                         \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimeValue\",
                         \"edgeTargetId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
-                        \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1 (add)\",
-                        \"edgeSourceUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                        \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1 (add)\",
+                        \"edgeSourceUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                     },
                     {
                         \"edgeTargetUri\": \"\",
@@ -603,12 +604,12 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\",
+                \"value\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\",
                 \"type\": \"other\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
+                \"value\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
                 \"type\": \"other\"
             },
             {
@@ -616,9 +617,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -668,9 +669,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -974,9 +975,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/volume\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1026,9 +1027,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/issue\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1078,9 +1079,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/pageStart\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1130,9 +1131,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/pageEnd\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1182,9 +1183,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/doi\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1234,9 +1235,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/pmid\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1286,9 +1287,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://vivoweb.org/ontology/core#pmcid\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1338,9 +1339,9 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/abstract\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1389,10 +1390,10 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#fullAuthorList\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#fullAuthorList\",
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1441,10 +1442,10 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#meshTerms\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#meshTerms\",
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1493,10 +1494,10 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#medlineCategory\",
-                    \"DomainLabel\": \"vlocal:Directory1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory\"
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#medlineCategory\",
+                    \"DomainLabel\": \"vlocalclass:Directory1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory\"
                 }],
                 \"type\": \"other\"
             },
@@ -1536,7 +1537,7 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"edgeId\": \"http://xmlns.com/foaf/0.1/logo\",
                     \"edgeTargetId\": \"http://purl.org/ontology/bibo/Journal1\",
-                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\"
+                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\"
                 }],
                 \"type\": \"other\"
             },
@@ -1545,7 +1546,7 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"edgeId\": \"http://xmlns.com/foaf/0.1/logo\",
                     \"edgeTargetId\": \"http://purl.org/ontology/bibo/Journal1\",
-                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocal#Directory1\"
+                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#Directory1\"
                 }],
                 \"type\": \"other\"
             },
@@ -1629,8 +1630,8 @@ _:node19de01q0ix1 km-dev:hasSubjectMap _:node19de01q0ix3 .
 
 _:node19de01q0ix3 km-dev:isPartOfMapping _:node19de01q0ix1 ;
 	a rr:SubjectMap ;
-	km-dev:alignmentNodeId "http://vivo.northwestern.edu/ontology/vlocal#Directory1" ;
-	rr:class vlocal:Directory ;
+	km-dev:alignmentNodeId "http://vivo.northwestern.edu/ontology/vlocalclass#Directory1" ;
+	rr:class vlocalclass:Directory ;
 	rr:template "{uuid}" ;
 	a km-dev:steinerTreeRootNode .
 
@@ -1753,7 +1754,7 @@ km-dev:PredicateObjectMap_9a3050e6-f93d-4a05-a28b-5034381c899b a rr:PredicateObj
 
 _:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9a3050e6-f93d-4a05-a28b-5034381c899b .
 
-km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 rr:predicate vlocal:fullAuthorList .
+km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 rr:predicate vlocalproperty:fullAuthorList .
 
 _:node19de01q0ix11 rr:column "Full Authors" ;
 	a rr:ObjectMap ;
@@ -1770,7 +1771,7 @@ km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 a rr:PredicateObj
 
 _:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 .
 
-km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 rr:predicate vlocal:medlineCategory .
+km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 rr:predicate vlocalproperty:medlineCategory .
 
 _:node19de01q0ix12 rr:column "publication_type" ;
 	a rr:ObjectMap ;
@@ -1787,7 +1788,7 @@ km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 a rr:PredicateObj
 
 _:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 .
 
-km-dev:PredicateObjectMap_f5ae3aa6-9060-4119-b2d7-240ad1c93b2b rr:predicate vlocal:meshTerms .
+km-dev:PredicateObjectMap_f5ae3aa6-9060-4119-b2d7-240ad1c93b2b rr:predicate vlocalproperty:meshTerms .
 
 _:node19de01q0ix13 rr:column "Mesh Terms" ;
 	a rr:ObjectMap ;

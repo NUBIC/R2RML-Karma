@@ -13,7 +13,8 @@
 @prefix aktp: <http://www.aktors.org/ontology/portal#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
-@prefix vlocal: <http://vivo.northwestern.edu/ontology/vlocal#> .
+@prefix vlocalclass: <http://vivo.northwestern.edu/ontology/vlocal/class#> .
+@prefix vlocalproperty: <http://vivo.northwestern.edu/ontology/vlocal/property#> .
 @prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
 @prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
 @prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
@@ -1389,7 +1390,7 @@ _:node19dfvkjinx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#fullAuthorList\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#fullAuthorList\",
                     \"DomainLabel\": \"obo:ERO_00000161\",
                     \"DomainId\": \"http://purl.obolibrary.org/obo/ERO_00000161\",
                     \"DomainUri\": \"http://purl.obolibrary.org/obo/ERO_0000016\"
@@ -1441,7 +1442,7 @@ _:node19dfvkjinx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#meshTerms\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#meshTerms\",
                     \"DomainLabel\": \"obo:ERO_00000161\",
                     \"DomainId\": \"http://purl.obolibrary.org/obo/ERO_00000161\",
                     \"DomainUri\": \"http://purl.obolibrary.org/obo/ERO_0000016\"
@@ -1493,7 +1494,7 @@ _:node19dfvkjinx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#medlineCategory\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#medlineCategory\",
                     \"DomainLabel\": \"obo:ERO_00000161\",
                     \"DomainId\": \"http://purl.obolibrary.org/obo/ERO_00000161\",
                     \"DomainUri\": \"http://purl.obolibrary.org/obo/ERO_0000016\"
@@ -1753,7 +1754,7 @@ km-dev:PredicateObjectMap_da1154b2-d07f-41a7-a762-a378e5d66b0e a rr:PredicateObj
 
 _:node19dfvkjinx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_da1154b2-d07f-41a7-a762-a378e5d66b0e .
 
-km-dev:PredicateObjectMap_835c71cd-ad0b-493a-8142-0496edb7392b rr:predicate vlocal:fullAuthorList .
+km-dev:PredicateObjectMap_835c71cd-ad0b-493a-8142-0496edb7392b rr:predicate vlocalproperty:fullAuthorList .
 
 _:node19dfvkjinx11 rr:column "Full Authors" ;
 	a rr:ObjectMap ;
@@ -1770,7 +1771,7 @@ km-dev:PredicateObjectMap_835c71cd-ad0b-493a-8142-0496edb7392b a rr:PredicateObj
 
 _:node19dfvkjinx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_835c71cd-ad0b-493a-8142-0496edb7392b .
 
-km-dev:PredicateObjectMap_60ca55aa-d30b-4322-8415-8adab845a68b rr:predicate vlocal:medlineCategory .
+km-dev:PredicateObjectMap_60ca55aa-d30b-4322-8415-8adab845a68b rr:predicate vlocalproperty:medlineCategory .
 
 _:node19dfvkjinx12 rr:column "publication_type" ;
 	a rr:ObjectMap ;
@@ -1787,7 +1788,7 @@ km-dev:PredicateObjectMap_60ca55aa-d30b-4322-8415-8adab845a68b a rr:PredicateObj
 
 _:node19dfvkjinx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_60ca55aa-d30b-4322-8415-8adab845a68b .
 
-km-dev:PredicateObjectMap_0c426f25-7941-4973-805e-2116296f0713 rr:predicate vlocal:meshTerms .
+km-dev:PredicateObjectMap_0c426f25-7941-4973-805e-2116296f0713 rr:predicate vlocalproperty:meshTerms .
 
 _:node19dfvkjinx13 rr:column "Mesh Terms" ;
 	a rr:ObjectMap ;

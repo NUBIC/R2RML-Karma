@@ -43,7 +43,8 @@
 @prefix geo: <http://aims.fao.org/aos/geopolitical.owl#> .
 @prefix app: <http://eagle-i.org/ont/app/1.0/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vlocal: <http://localhost/vivo/ontology/vivo-local#> .
+@prefix vlocalclass: <http://vivo.northwestern.edu/ontology/vlocal/class#> .
+@prefix vlocalproperty: <http://vivo.northwestern.edu/ontology/vlocal/property#> .
 @prefix wot: <http://xmlns.com/wot/0.1/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
@@ -125,7 +126,7 @@ _:node19b5m9077x1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://localhost/vivo/ontology/vivo-local#abstractID\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal/property#abstractID\",
                     \"DomainLabel\": \"bibo:AcademicArticle1 (add)\",
                     \"DomainId\": \"http://purl.org/ontology/bibo/AcademicArticle1\",
                     \"DomainUri\": \"http://purl.org/ontology/bibo/AcademicArticle\"

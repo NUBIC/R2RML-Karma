@@ -13,7 +13,8 @@
 @prefix aktp: <http://www.aktors.org/ontology/portal#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
-@prefix vlocal: <http://vivo.northwestern.edu/ontology/vlocal#> .
+@prefix vlocalclass: <http://vivo.northwestern.edu/ontology/vlocal/class#> .
+@prefix vlocalproperty: <http://vivo.northwestern.edu/ontology/vlocal/property#> .
 @prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
 @prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
 @prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
@@ -1389,7 +1390,7 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#fullAuthorList\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#fullAuthorList\",
                     \"DomainLabel\": \"event:Event1\",
                     \"DomainId\": \"http://purl.org/NET/c4dm/event.owl#Event1\",
                     \"DomainUri\": \"http://purl.org/NET/c4dm/event.owl#Event\"
@@ -1441,7 +1442,7 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#meshTerms\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#meshTerms\",
                     \"DomainLabel\": \"event:Event1\",
                     \"DomainId\": \"http://purl.org/NET/c4dm/event.owl#Event1\",
                     \"DomainUri\": \"http://purl.org/NET/c4dm/event.owl#Event\"
@@ -1493,7 +1494,7 @@ _:node19de01q0ix1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#medlineCategory\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#medlineCategory\",
                     \"DomainLabel\": \"event:Event1\",
                     \"DomainId\": \"http://purl.org/NET/c4dm/event.owl#Event1\",
                     \"DomainUri\": \"http://purl.org/NET/c4dm/event.owl#Event\"
@@ -1753,7 +1754,7 @@ km-dev:PredicateObjectMap_9a3050e6-f93d-4a05-a28b-5034381c899b a rr:PredicateObj
 
 _:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9a3050e6-f93d-4a05-a28b-5034381c899b .
 
-km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 rr:predicate vlocal:fullAuthorList .
+km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 rr:predicate vlocalproperty:fullAuthorList .
 
 _:node19de01q0ix11 rr:column "Full Authors" ;
 	a rr:ObjectMap ;
@@ -1770,7 +1771,7 @@ km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 a rr:PredicateObj
 
 _:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 .
 
-km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 rr:predicate vlocal:medlineCategory .
+km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 rr:predicate vlocalproperty:medlineCategory .
 
 _:node19de01q0ix12 rr:column "publication_type" ;
 	a rr:ObjectMap ;
@@ -1787,7 +1788,7 @@ km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 a rr:PredicateObj
 
 _:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 .
 
-km-dev:PredicateObjectMap_f5ae3aa6-9060-4119-b2d7-240ad1c93b2b rr:predicate vlocal:meshTerms .
+km-dev:PredicateObjectMap_f5ae3aa6-9060-4119-b2d7-240ad1c93b2b rr:predicate vlocalproperty:meshTerms .
 
 _:node19de01q0ix13 rr:column "Mesh Terms" ;
 	a rr:ObjectMap ;

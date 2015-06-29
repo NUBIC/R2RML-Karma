@@ -13,7 +13,8 @@
 @prefix aktp: <http://www.aktors.org/ontology/portal#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
-@prefix vlocal: <http://vivo.northwestern.edu/ontology/vlocal#> .
+@prefix vlocalclass: <http://vivo.northwestern.edu/ontology/vlocal/class#> .
+@prefix vlocalproperty: <http://vivo.northwestern.edu/ontology/vlocal/property#> .
 @prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
 @prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
 @prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
@@ -88,7 +89,7 @@ _:node19mo44clbx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://localhost/vivo/ontology/vivo-local#peopleID\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal/property#peopleID\",
                     \"DomainLabel\": \"vivo:FacultyMember1 (add)\",
                     \"DomainId\": \"http://vivoweb.org/ontology/core#FacultyMember1\",
                     \"DomainUri\": \"http://vivoweb.org/ontology/core#FacultyMember\"
@@ -762,7 +763,7 @@ _:node19mo44clbx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://localhost/vivo/ontology/vivo-local#employeeID\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal/property#employeeID\",
                     \"DomainLabel\": \"vivo:FacultyMember1\",
                     \"DomainId\": \"http://vivoweb.org/ontology/core#FacultyMember1\",
                     \"DomainUri\": \"http://vivoweb.org/ontology/core#FacultyMember\"
@@ -866,7 +867,7 @@ _:node19mo44clbx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://localhost/vivo/ontology/vivo-local#netID\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal/property#netID\",
                     \"DomainLabel\": \"vivo:FacultyMember1\",
                     \"DomainId\": \"http://vivoweb.org/ontology/core#FacultyMember1\",
                     \"DomainUri\": \"http://vivoweb.org/ontology/core#FacultyMember\"
@@ -918,7 +919,7 @@ _:node19mo44clbx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#fsmFacultyProfileID\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#fsmFacultyProfileID\",
                     \"DomainLabel\": \"vivo:FacultyMember1\",
                     \"DomainId\": \"http://vivoweb.org/ontology/core#FacultyMember1\",
                     \"DomainUri\": \"http://vivoweb.org/ontology/core#FacultyMember\"
@@ -974,7 +975,7 @@ _:node19mo44clbx3 km-dev:isPartOfMapping _:node19mo44clbx1 ;
 	rr:template "{uuid}" ;
 	a km-dev:steinerTreeRootNode .
 
-km-dev:PredicateObjectMap_5b5029af-fc48-4264-b356-c48493539fbb rr:predicate vlocal:fsmFacultyProfileID .
+km-dev:PredicateObjectMap_5b5029af-fc48-4264-b356-c48493539fbb rr:predicate vlocalproperty:fsmFacultyProfileID .
 
 _:node19mo44clbx4 rr:column "xid" ;
 	a rr:ObjectMap ;

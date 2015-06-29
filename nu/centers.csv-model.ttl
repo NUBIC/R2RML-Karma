@@ -13,7 +13,8 @@
 @prefix aktp: <http://www.aktors.org/ontology/portal#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
-@prefix vlocal: <http://vivo.northwestern.edu/ontology/vlocal#> .
+@prefix vlocalclass: <http://vivo.northwestern.edu/ontology/vlocal/class#> .
+@prefix vlocalproperty: <http://vivo.northwestern.edu/ontology/vlocal/property#> .
 @prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
 @prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
 @prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
@@ -88,7 +89,7 @@ _:node19ddt2f1ex1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://localhost/vivo/ontology/vivo-local#orgID\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal/property#orgID\",
                     \"DomainLabel\": \"vivo:Center1 (add)\",
                     \"DomainId\": \"http://vivoweb.org/ontology/core#Center1 (add)\",
                     \"DomainUri\": \"http://vivoweb.org/ontology/core#Center\"
@@ -145,7 +146,7 @@ _:node19ddt2f1ex1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://localhost/vivo/ontology/vivo-local#orgID\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal/property#orgID\",
                     \"DomainLabel\": \"vivo:Center1\",
                     \"DomainId\": \"http://vivoweb.org/ontology/core#Center1\",
                     \"DomainUri\": \"http://vivoweb.org/ontology/core#Center\"
@@ -477,7 +478,7 @@ _:node19ddt2f1ex1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#DivisionID\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#DivisionID\",
                     \"DomainLabel\": \"vivo:Center1\",
                     \"DomainId\": \"http://vivoweb.org/ontology/core#Center1\",
                     \"DomainUri\": \"http://vivoweb.org/ontology/core#Center\"
@@ -529,7 +530,7 @@ _:node19ddt2f1ex1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#DepartmentID\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#DepartmentID\",
                     \"DomainLabel\": \"vivo:Center1\",
                     \"DomainId\": \"http://vivoweb.org/ontology/core#Center1\",
                     \"DomainUri\": \"http://vivoweb.org/ontology/core#Center\"
@@ -585,7 +586,7 @@ _:node19ddt2f1ex3 km-dev:isPartOfMapping _:node19ddt2f1ex1 ;
 	rr:template "{uuid}" ;
 	a km-dev:steinerTreeRootNode .
 
-km-dev:PredicateObjectMap_86355a82-419e-4d17-9622-9022c1e9fc92 rr:predicate vlocal:DepartmentID .
+km-dev:PredicateObjectMap_86355a82-419e-4d17-9622-9022c1e9fc92 rr:predicate vlocalproperty:DepartmentID .
 
 _:node19ddt2f1ex4 rr:column "department_id" ;
 	a rr:ObjectMap ;
@@ -602,7 +603,7 @@ km-dev:PredicateObjectMap_86355a82-419e-4d17-9622-9022c1e9fc92 a rr:PredicateObj
 
 _:node19ddt2f1ex1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_86355a82-419e-4d17-9622-9022c1e9fc92 .
 
-km-dev:PredicateObjectMap_93aab543-73f2-4b17-9413-c267a538de4a rr:predicate vlocal:DivisionID .
+km-dev:PredicateObjectMap_93aab543-73f2-4b17-9413-c267a538de4a rr:predicate vlocalproperty:DivisionID .
 
 _:node19ddt2f1ex5 rr:column "division_id" ;
 	a rr:ObjectMap ;

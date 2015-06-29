@@ -13,7 +13,8 @@
 @prefix aktp: <http://www.aktors.org/ontology/portal#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
-@prefix vlocal: <http://vivo.northwestern.edu/ontology/vlocal#> .
+@prefix vlocalclass: <http://vivo.northwestern.edu/ontology/vlocal/class#> .
+@prefix vlocalproperty: <http://vivo.northwestern.edu/ontology/vlocal/property#> .
 @prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
 @prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
 @prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
@@ -91,12 +92,12 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\",
+                \"value\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\",
                 \"type\": \"other\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1 (add)\",
+                \"value\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1 (add)\",
                 \"type\": \"other\"
             },
             {
@@ -104,9 +105,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"vlocal:CaseReports1 (add)\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1 (add)\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -213,8 +214,8 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                     \"edgeTargetUri\": \"http://vivoweb.org/ontology/core#DateTimeValue\",
                     \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimeValue\",
                     \"edgeTargetId\": \"http://vivoweb.org/ontology/core#DateTimeValue1 (add)\",
-                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"edgeSourceUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\"
+                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"edgeSourceUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\"
                 }],
                 \"type\": \"other\"
             },
@@ -530,7 +531,7 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                     {
                         \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimeValue\",
                         \"edgeTargetId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
-                        \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\"
+                        \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\"
                     },
                     {
                         \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimePrecision\",
@@ -552,8 +553,8 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                         \"edgeTargetUri\": \"http://vivoweb.org/ontology/core#DateTimeValue\",
                         \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimeValue\",
                         \"edgeTargetId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
-                        \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1 (add)\",
-                        \"edgeSourceUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                        \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1 (add)\",
+                        \"edgeSourceUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                     },
                     {
                         \"edgeTargetUri\": \"\",
@@ -603,12 +604,12 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"metaPropertyUri\",
-                \"value\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\",
+                \"value\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\",
                 \"type\": \"other\"
             },
             {
                 \"name\": \"metaPropertyId\",
-                \"value\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
+                \"value\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
                 \"type\": \"other\"
             },
             {
@@ -616,9 +617,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -668,9 +669,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -974,9 +975,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/volume\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1026,9 +1027,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/issue\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1078,9 +1079,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/pageStart\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1130,9 +1131,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/pageEnd\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1182,9 +1183,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/doi\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1234,9 +1235,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/pmid\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1286,9 +1287,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://vivoweb.org/ontology/core#pmcid\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1338,9 +1339,9 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"isPrimary\": true,
                     \"FullType\": \"http://purl.org/ontology/bibo/abstract\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1389,10 +1390,10 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#fullAuthorList\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#fullAuthorList\",
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1441,10 +1442,10 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#meshTerms\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#meshTerms\",
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1493,10 +1494,10 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#medlineCategory\",
-                    \"DomainLabel\": \"vlocal:CaseReports1\",
-                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\",
-                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports\"
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#medlineCategory\",
+                    \"DomainLabel\": \"vlocalclass:CaseReports1\",
+                    \"DomainId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\",
+                    \"DomainUri\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports\"
                 }],
                 \"type\": \"other\"
             },
@@ -1536,7 +1537,7 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"edgeId\": \"http://xmlns.com/foaf/0.1/logo\",
                     \"edgeTargetId\": \"http://purl.org/ontology/bibo/Journal1\",
-                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\"
+                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\"
                 }],
                 \"type\": \"other\"
             },
@@ -1545,7 +1546,7 @@ _:node19ddrbfnlx1 a km-dev:R2RMLMapping ;
                 \"value\": [{
                     \"edgeId\": \"http://xmlns.com/foaf/0.1/logo\",
                     \"edgeTargetId\": \"http://purl.org/ontology/bibo/Journal1\",
-                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocal#CaseReports1\"
+                    \"edgeSourceId\": \"http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1\"
                 }],
                 \"type\": \"other\"
             },
@@ -1686,8 +1687,8 @@ _:node19ddrbfnlx1 km-dev:hasSubjectMap _:node19ddrbfnlx7 .
 
 _:node19ddrbfnlx7 km-dev:isPartOfMapping _:node19ddrbfnlx1 ;
     a rr:SubjectMap ;
-    km-dev:alignmentNodeId "http://vivo.northwestern.edu/ontology/vlocal#CaseReports1" ;
-    rr:class vlocal:CaseReports ;
+    km-dev:alignmentNodeId "http://vivo.northwestern.edu/ontology/vlocalclass#CaseReports1" ;
+    rr:class vlocalclass:CaseReports ;
     rr:template "{uuid}" ;
     a km-dev:steinerTreeRootNode .
 
@@ -1810,7 +1811,7 @@ km-dev:PredicateObjectMap_27ea6944-9e8f-4428-bd47-56aa9a63eac6 a rr:PredicateObj
 
 _:node19ddrbfnlx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_27ea6944-9e8f-4428-bd47-56aa9a63eac6 .
 
-km-dev:PredicateObjectMap_d04821db-40b5-41f4-845b-9a8902d520a6 rr:predicate vlocal:fullAuthorList .
+km-dev:PredicateObjectMap_d04821db-40b5-41f4-845b-9a8902d520a6 rr:predicate vlocalproperty:fullAuthorList .
 
 _:node19ddrbfnlx15 rr:column "Full Authors" ;
     a rr:ObjectMap ;
@@ -1827,7 +1828,7 @@ km-dev:PredicateObjectMap_d04821db-40b5-41f4-845b-9a8902d520a6 a rr:PredicateObj
 
 _:node19ddrbfnlx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d04821db-40b5-41f4-845b-9a8902d520a6 .
 
-km-dev:PredicateObjectMap_6ecf8642-5406-48f0-9f57-6d094b7bf748 rr:predicate vlocal:medlineCategory .
+km-dev:PredicateObjectMap_6ecf8642-5406-48f0-9f57-6d094b7bf748 rr:predicate vlocalproperty:medlineCategory .
 
 _:node19ddrbfnlx16 rr:column "publication_type" ;
     a rr:ObjectMap ;
@@ -1844,7 +1845,7 @@ km-dev:PredicateObjectMap_6ecf8642-5406-48f0-9f57-6d094b7bf748 a rr:PredicateObj
 
 _:node19ddrbfnlx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_6ecf8642-5406-48f0-9f57-6d094b7bf748 .
 
-km-dev:PredicateObjectMap_c05b943e-e6c8-4dcb-b156-8572323e8546 rr:predicate vlocal:meshTerms .
+km-dev:PredicateObjectMap_c05b943e-e6c8-4dcb-b156-8572323e8546 rr:predicate vlocalproperty:meshTerms .
 
 _:node19ddrbfnlx17 rr:column "Mesh Terms" ;
     a rr:ObjectMap ;

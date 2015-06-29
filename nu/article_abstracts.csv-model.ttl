@@ -13,7 +13,8 @@
 @prefix aktp: <http://www.aktors.org/ontology/portal#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
-@prefix vlocal: <http://vivo.northwestern.edu/ontology/vlocal#> .
+@prefix vlocalclass: <http://vivo.northwestern.edu/ontology/vlocal/class#> .
+@prefix vlocalproperty: <http://vivo.northwestern.edu/ontology/vlocal/property#> .
 @prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
 @prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
 @prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
@@ -1389,7 +1390,7 @@ _:node19dfvrikfx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#fullAuthorList\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#fullAuthorList\",
                     \"DomainLabel\": \"bibo:Article1\",
                     \"DomainId\": \"http://purl.org/ontology/bibo/Article1\",
                     \"DomainUri\": \"http://purl.org/ontology/bibo/Article\"
@@ -1441,7 +1442,7 @@ _:node19dfvrikfx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#meshTerms\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#meshTerms\",
                     \"DomainLabel\": \"bibo:Article1\",
                     \"DomainId\": \"http://purl.org/ontology/bibo/Article1\",
                     \"DomainUri\": \"http://purl.org/ontology/bibo/Article\"
@@ -1493,7 +1494,7 @@ _:node19dfvrikfx1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#medlineCategory\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#medlineCategory\",
                     \"DomainLabel\": \"bibo:Article1\",
                     \"DomainId\": \"http://purl.org/ontology/bibo/Article1\",
                     \"DomainUri\": \"http://purl.org/ontology/bibo/Article\"
@@ -1753,7 +1754,7 @@ km-dev:PredicateObjectMap_ecb943d7-2ed7-4274-bf27-6b9aa133c4b7 a rr:PredicateObj
 
 _:node19dfvrikfx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ecb943d7-2ed7-4274-bf27-6b9aa133c4b7 .
 
-km-dev:PredicateObjectMap_183a7abc-314f-4dae-9a0a-9d1688cde050 rr:predicate vlocal:fullAuthorList .
+km-dev:PredicateObjectMap_183a7abc-314f-4dae-9a0a-9d1688cde050 rr:predicate vlocalproperty:fullAuthorList .
 
 _:node19dfvrikfx11 rr:column "Full Authors" ;
 	a rr:ObjectMap ;
@@ -1770,7 +1771,7 @@ km-dev:PredicateObjectMap_183a7abc-314f-4dae-9a0a-9d1688cde050 a rr:PredicateObj
 
 _:node19dfvrikfx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_183a7abc-314f-4dae-9a0a-9d1688cde050 .
 
-km-dev:PredicateObjectMap_9f4311ce-f0d0-44f5-8b35-fcc76eba49e9 rr:predicate vlocal:medlineCategory .
+km-dev:PredicateObjectMap_9f4311ce-f0d0-44f5-8b35-fcc76eba49e9 rr:predicate vlocalproperty:medlineCategory .
 
 _:node19dfvrikfx12 rr:column "publication_type" ;
 	a rr:ObjectMap ;
@@ -1787,7 +1788,7 @@ km-dev:PredicateObjectMap_9f4311ce-f0d0-44f5-8b35-fcc76eba49e9 a rr:PredicateObj
 
 _:node19dfvrikfx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9f4311ce-f0d0-44f5-8b35-fcc76eba49e9 .
 
-km-dev:PredicateObjectMap_9634a3a3-6483-4ccc-9736-0c90a1e9c64f rr:predicate vlocal:meshTerms .
+km-dev:PredicateObjectMap_9634a3a3-6483-4ccc-9736-0c90a1e9c64f rr:predicate vlocalproperty:meshTerms .
 
 _:node19dfvrikfx13 rr:column "Mesh Terms" ;
 	a rr:ObjectMap ;

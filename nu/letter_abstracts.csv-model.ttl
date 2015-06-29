@@ -13,7 +13,8 @@
 @prefix aktp: <http://www.aktors.org/ontology/portal#> .
 @prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
-@prefix vlocal: <http://vivo.northwestern.edu/ontology/vlocal#> .
+@prefix vlocalclass: <http://vivo.northwestern.edu/ontology/vlocal/class#> .
+@prefix vlocalproperty: <http://vivo.northwestern.edu/ontology/vlocal/property#> .
 @prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
 @prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
 @prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
@@ -1389,7 +1390,7 @@ _:node19dfsima2x1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#fullAuthorList\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#fullAuthorList\",
                     \"DomainLabel\": \"bibo:Letter1\",
                     \"DomainId\": \"http://purl.org/ontology/bibo/Letter1\",
                     \"DomainUri\": \"http://purl.org/ontology/bibo/Letter\"
@@ -1441,7 +1442,7 @@ _:node19dfsima2x1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#meshTerms\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#meshTerms\",
                     \"DomainLabel\": \"bibo:Letter1\",
                     \"DomainId\": \"http://purl.org/ontology/bibo/Letter1\",
                     \"DomainUri\": \"http://purl.org/ontology/bibo/Letter\"
@@ -1493,7 +1494,7 @@ _:node19dfsima2x1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
                     \"isPrimary\": true,
-                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocal#medlineCategory\",
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#medlineCategory\",
                     \"DomainLabel\": \"bibo:Letter1\",
                     \"DomainId\": \"http://purl.org/ontology/bibo/Letter1\",
                     \"DomainUri\": \"http://purl.org/ontology/bibo/Letter\"
@@ -1810,7 +1811,7 @@ km-dev:PredicateObjectMap_2c1773cc-9bb4-4afe-be8c-908efda3533b a rr:PredicateObj
 
 _:node19dfsima2x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_2c1773cc-9bb4-4afe-be8c-908efda3533b .
 
-km-dev:PredicateObjectMap_9c60f62c-5bb2-4a10-b9f5-e145f9048bcc rr:predicate vlocal:fullAuthorList .
+km-dev:PredicateObjectMap_9c60f62c-5bb2-4a10-b9f5-e145f9048bcc rr:predicate vlocalproperty:fullAuthorList .
 
 _:node19dfsima2x15 rr:column "Full Authors" ;
 	a rr:ObjectMap ;
@@ -1827,7 +1828,7 @@ km-dev:PredicateObjectMap_9c60f62c-5bb2-4a10-b9f5-e145f9048bcc a rr:PredicateObj
 
 _:node19dfsima2x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9c60f62c-5bb2-4a10-b9f5-e145f9048bcc .
 
-km-dev:PredicateObjectMap_68c19337-fb8e-4d7b-8511-00ab27a85c40 rr:predicate vlocal:medlineCategory .
+km-dev:PredicateObjectMap_68c19337-fb8e-4d7b-8511-00ab27a85c40 rr:predicate vlocalproperty:medlineCategory .
 
 _:node19dfsima2x16 rr:column "publication_type" ;
 	a rr:ObjectMap ;
@@ -1844,7 +1845,7 @@ km-dev:PredicateObjectMap_68c19337-fb8e-4d7b-8511-00ab27a85c40 a rr:PredicateObj
 
 _:node19dfsima2x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_68c19337-fb8e-4d7b-8511-00ab27a85c40 .
 
-km-dev:PredicateObjectMap_1a23c2cd-8f8b-4a1b-8cd2-a6e7ae9c3575 rr:predicate vlocal:meshTerms .
+km-dev:PredicateObjectMap_1a23c2cd-8f8b-4a1b-8cd2-a6e7ae9c3575 rr:predicate vlocalproperty:meshTerms .
 
 _:node19dfsima2x17 rr:column "Mesh Terms" ;
 	a rr:ObjectMap ;
