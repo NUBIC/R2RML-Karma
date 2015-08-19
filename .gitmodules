@@ -1,0 +1,3 @@
+[submodule "ontology_extensions"]
+	path = ontology_extensions
+	url = https://github.com/vioil/ontology_extensions

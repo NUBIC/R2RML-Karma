@@ -1,0 +1,1989 @@
+@prefix vitro-public: <http://vitro.mannlib.cornell.edu/ns/vitro/public#> .
+@prefix c4o: <http://purl.org/spar/c4o/> .
+@prefix role: <http://vitro.mannlib.cornell.edu/ns/vitro/role#> .
+@prefix ocrer: <http://purl.org/net/OCRe/research.owl#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl2: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix aka: <http://vivoweb.org/ontology/aka#> .
+@prefix far: <http://vitro.mannlib.cornell.edu/ns/reporting#> .
+@prefix ocresd: <http://purl.org/net/OCRe/study_design.owl#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix aktp: <http://www.aktors.org/ontology/portal#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix socsci: <http://vivo.library.cornell.edu/ns/vivo/socsci/0.1#> .
+@prefix vlocalclass: <http://vivo.northwestern.edu/ontology/vlocal/class#> .
+@prefix vlocalproperty: <http://vivo.northwestern.edu/ontology/vlocal/property#> .
+@prefix ns1: <http://purl.org/net/OCRe/statistics.owl#> .
+@prefix sce: <http://vivoweb.org/ontology/SchoolOfContinuingEducation#> .
+@prefix config: <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#> .
+@prefix ns2: <http://www.w3.org/2008/05/skos#> .
+@prefix vivoc: <http://vivo.library.cornell.edu/ns/0.1#> .
+@prefix pubmed: <http://vitro.mannlib.cornell.edu/ns/pubmed#> .
+@prefix cce: <http://vivoweb.org/ontology/cornell-cooperative-extension#> .
+@prefix mann: <http://vivo.cornell.edu/ns/mannadditions/0.1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix datagetter: <java:edu/cornell/mannlib/vitro/webapp/utils/datagetter/> .
+@prefix hr: <http://vivo.cornell.edu/ns/hr/0.9/hr.owl#> .
+@prefix pvs: <http://vivoweb.org/ontology/provenance-support#> .
+@prefix wos: <http://vivo.mannlib.cornell.edu/ns/ThomsonWOS/0.1#> .
+@prefix scirr: <http://vivoweb.org/ontology/scientific-research-resource#> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix stars: <http://vitro.mannlib.cornell.edu/ns/cornell/stars/classes#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns3: <http://purl.org/net/OCRe/study_protocol.owl#> .
+@prefix ai: <http://vivoweb.org/ontology/activity-insight#> .
+@prefix ns4: <http://purl.org/dc/terms/> .
+@prefix scires: <http://vivoweb.org/ontology/scientific-research#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wcmc: <http://weill.cornell.edu/vivo/ontology/wcmc#> .
+@prefix geo: <http://aims.fao.org/aos/geopolitical.owl#> .
+@prefix app: <http://eagle-i.org/ont/app/1.0/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix display: <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#> .
+@prefix ospcu: <http://vivoweb.org/ontology/cu-vivo-osp#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix swvs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix local: <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node19de01q0ix1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "av_document_abstracts.csv" ;
+	km-dev:modelPublicationTime "1423177738258"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"Full Authors\"}],[{\"columnName\":\"Mesh Terms\"}],[{\"columnName\":\"pubmedcentral\"}],[{\"columnName\":\"abstract\"}],[{\"columnName\":\"publication_type\"}],[{\"columnName\":\"pubmed\"}],[{\"columnName\":\"Volume\"}],[{\"columnName\":\"Issue\"}],[{\"columnName\":\"uuid\"}],[{\"columnName\":\"ID\"}],[{\"columnName\":\"Journal OR Published proceedings\"}],[{\"columnName\":\"ISSN\"}],[{\"columnName\":\"Title\"}],[{\"columnName\":\"DOI\"}],[{\"columnName\":\"Publication Date1\"}],[{\"columnName\":\"Pagination (end page)\"}],[{\"columnName\":\"Pagination (start page)\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"Full Authors\"}],[{\"columnName\":\"Mesh Terms\"}],[{\"columnName\":\"publication_uri\"}],[{\"columnName\":\"pubmedcentral\"}],[{\"columnName\":\"abstract\"}],[{\"columnName\":\"publication_type\"}],[{\"columnName\":\"pubmed\"}],[{\"columnName\":\"Volume\"}],[{\"columnName\":\"Issue\"}],[{\"columnName\":\"journal_id\"}],[{\"columnName\":\"uuid\"}],[{\"columnName\":\"ID\"}],[{\"columnName\":\"Journal OR Published proceedings\"}],[{\"columnName\":\"Title\"}],[{\"columnName\":\"ISSN\"}],[{\"columnName\":\"Publication Date1\"}],[{\"columnName\":\"DOI\"}],[{\"columnName\":\"Pagination (end page)\"}],[{\"columnName\":\"Pagination (start page)\"}]]" ;
+	km-dev:hasModelLabel "av_document_abstracts.csv" ;
+	km-dev:hasBaseURI "http://vivo.northwestern.edu/individual/n" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ID\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://purl.org/ontology/bibo/AudioVisualDocument\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://purl.org/ontology/bibo/AudioVisualDocument1 (add)\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1 (add)\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Publication Date1\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"publication_uri\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return \\\"http://vivo.northwestern.edu/individual/\\\" + getValue(\\\"Publication Date1\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"value\": \"false\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Publication Date1\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"publication_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP12:WS1AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://vivoweb.org/ontology/core#DateTimeValue\",
+                    \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimeValue\",
+                    \"edgeTargetId\": \"http://vivoweb.org/ontology/core#DateTimeValue1 (add)\",
+                    \"edgeSourceId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"edgeSourceUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"publication_uri\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://vivoweb.org/ontology/core#DateTimeValue\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"vivo:DateTimeValue1\",
+                    \"DomainId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
+                    \"DomainUri\": \"http://vivoweb.org/ontology/core#DateTimeValue\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"publication_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"publication_uri\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Publication Date1\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://vivoweb.org/ontology/core#dateTime\",
+                    \"DomainLabel\": \"vivo:DateTimeValue1\",
+                    \"DomainId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
+                    \"DomainUri\": \"http://vivoweb.org/ontology/core#DateTimeValue\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"xsd:dateTime\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Publication Date1\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Publication Date1\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"literalValue\",
+                \"value\": \"http://vivoweb.org/ontology/core#yearPrecision\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"literalType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"isUri\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"AddLiteralNodeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeTargetUri\": \"http://vivoweb.org/ontology/core#yearPrecision\",
+                    \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimePrecision\",
+                    \"edgeTargetId\": \"http://vivoweb.org/ontology/core#yearPrecision1\",
+                    \"edgeSourceId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
+                    \"edgeSourceUri\": \"http://vivoweb.org/ontology/core#DateTimeValue\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://vivo.northwestern.edu/individual/\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ID\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"UnassignSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [
+                    {
+                        \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimeValue\",
+                        \"edgeTargetId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
+                        \"edgeSourceId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\"
+                    },
+                    {
+                        \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimePrecision\",
+                        \"edgeTargetId\": \"http://vivoweb.org/ontology/core#yearPrecision1\",
+                        \"edgeSourceId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"alignmentId\",
+                \"value\": \"WSP1:WS2419AL\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [
+                    {
+                        \"edgeTargetUri\": \"http://vivoweb.org/ontology/core#DateTimeValue\",
+                        \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimeValue\",
+                        \"edgeTargetId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
+                        \"edgeSourceId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1 (add)\",
+                        \"edgeSourceUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                    },
+                    {
+                        \"edgeTargetUri\": \"\",
+                        \"edgeId\": \"http://vivoweb.org/ontology/core#dateTimePrecision\",
+                        \"edgeTargetId\": \"http://vivoweb.org/ontology/core#yearPrecision1\",
+                        \"edgeSourceId\": \"http://vivoweb.org/ontology/core#DateTimeValue1\",
+                        \"edgeSourceUri\": \"http://vivoweb.org/ontology/core#DateTimeValue\"
+                    }
+                ],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"uuid\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://purl.org/ontology/bibo/AudioVisualDocument\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"uuid\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Title\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Title\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Title\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Journal OR Published proceedings\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://www.w3.org/2000/01/rdf-schema#label\",
+                    \"DomainLabel\": \"bibo:Journal1 (add)\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/Journal1 (add)\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/Journal\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Journal OR Published proceedings\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Journal OR Published proceedings\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ISSN\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/ontology/bibo/issn\",
+                    \"DomainLabel\": \"bibo:Journal1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/Journal1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/Journal\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ISSN\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ISSN\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Transformation\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ISSN\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"value\": \"journal_id\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"value\": \"return getValue(\\\"ISSN\\\")\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ISSN\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"journal_id\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SubmitPythonTransformationCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"journal_id\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"value\": \"isUriOfClass\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"value\": \"http://purl.org/ontology/bibo/Journal\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"value\": \"http://purl.org/ontology/bibo/Journal1\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"bibo:Journal1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/Journal1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/Journal\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"journal_id\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"journal_id\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetMetaPropertyCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"properties\",
+                \"value\": {
+                    \"hasServiceProperties\": false,
+                    \"hasPrefix\": false,
+                    \"graphLabel\": \"\",
+                    \"hasBaseURI\": true,
+                    \"baseURI\": \"http://vivo.northwestern.edu/individual/n\"
+                },
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetWorksheetPropertiesCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Volume\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/ontology/bibo/volume\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Volume\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Volume\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Issue\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/ontology/bibo/issue\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Issue\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Issue\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Pagination (start page)\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/ontology/bibo/pageStart\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Pagination (start page)\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Pagination (start page)\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Pagination (end page)\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/ontology/bibo/pageEnd\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Pagination (end page)\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Pagination (end page)\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"DOI\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/ontology/bibo/doi\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DOI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"DOI\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"pubmed\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/ontology/bibo/pmid\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"pubmed\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"pubmed\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"pubmedcentral\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://vivoweb.org/ontology/core#pmcid\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"pubmedcentral\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"pubmedcentral\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"abstract\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://purl.org/ontology/bibo/abstract\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"abstract\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"abstract\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Full Authors\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#fullAuthorList\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Full Authors\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Full Authors\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Mesh Terms\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#meshTerms\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Mesh Terms\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Mesh Terms\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"publication_type\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [{
+                    \"isPrimary\": true,
+                    \"FullType\": \"http://vivo.northwestern.edu/ontology/vlocalproperty#medlineCategory\",
+                    \"DomainLabel\": \"bibo:AudioVisualDocument1\",
+                    \"DomainId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\",
+                    \"DomainUri\": \"http://purl.org/ontology/bibo/AudioVisualDocument\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": false,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"publication_type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"publication_type\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"SetSemanticTypeCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"initialEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://xmlns.com/foaf/0.1/logo\",
+                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/Journal1\",
+                    \"edgeSourceId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"newEdges\",
+                \"value\": [{
+                    \"edgeId\": \"http://xmlns.com/foaf/0.1/logo\",
+                    \"edgeTargetId\": \"http://purl.org/ontology/bibo/Journal1\",
+                    \"edgeSourceId\": \"http://purl.org/ontology/bibo/AudioVisualDocument1\"
+                }],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"ChangeInternalNodeLinksCommand\"
+    },
+    {
+        \"tags\": [\"Modeling\"],
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"ID\"}],
+                \"type\": \"hNodeId\"
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"value\": \"W\",
+                \"type\": \"worksheetId\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"value\": \"DEFAULT_TEST\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"value\": [],
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"value\": true,
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"value\": \"\",
+                \"type\": \"other\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"ID\\\"}]}]\",
+                \"type\": \"hNodeIdList\"
+            }
+        ],
+        \"commandName\": \"UnassignSemanticTypeCommand\"
+    }
+]""" .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 a rr:TriplesMap .
+
+_:node19de01q0ix1 km-dev:hasTriplesMap km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix2 rr:tableName "av_document_abstracts.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasLogicalTable _:node19de01q0ix2 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:logicalTable _:node19de01q0ix2 ;
+	rr:subjectMap _:node19de01q0ix3 .
+
+_:node19de01q0ix1 km-dev:hasSubjectMap _:node19de01q0ix3 .
+
+_:node19de01q0ix3 km-dev:isPartOfMapping _:node19de01q0ix1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://purl.org/ontology/bibo/AudioVisualDocument1" ;
+	rr:class bibo:AudioVisualDocument ;
+	rr:template "{uuid}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_7c1ad367-df99-4884-a422-10483be1a485 rr:predicate bibo:abstract .
+
+_:node19de01q0ix4 rr:column "abstract" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix4 .
+
+km-dev:PredicateObjectMap_7c1ad367-df99-4884-a422-10483be1a485 rr:objectMap _:node19de01q0ix4 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_7c1ad367-df99-4884-a422-10483be1a485 .
+
+km-dev:PredicateObjectMap_7c1ad367-df99-4884-a422-10483be1a485 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_7c1ad367-df99-4884-a422-10483be1a485 .
+
+km-dev:PredicateObjectMap_c007626f-69a3-4c38-b758-28fbf2e57350 rr:predicate bibo:doi .
+
+_:node19de01q0ix5 rr:column "DOI" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix5 .
+
+km-dev:PredicateObjectMap_c007626f-69a3-4c38-b758-28fbf2e57350 rr:objectMap _:node19de01q0ix5 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_c007626f-69a3-4c38-b758-28fbf2e57350 .
+
+km-dev:PredicateObjectMap_c007626f-69a3-4c38-b758-28fbf2e57350 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c007626f-69a3-4c38-b758-28fbf2e57350 .
+
+km-dev:PredicateObjectMap_d4e13076-d157-48d8-8ebb-bbfe4009cfda rr:predicate bibo:issue .
+
+_:node19de01q0ix6 rr:column "Issue" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix6 .
+
+km-dev:PredicateObjectMap_d4e13076-d157-48d8-8ebb-bbfe4009cfda rr:objectMap _:node19de01q0ix6 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_d4e13076-d157-48d8-8ebb-bbfe4009cfda .
+
+km-dev:PredicateObjectMap_d4e13076-d157-48d8-8ebb-bbfe4009cfda a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d4e13076-d157-48d8-8ebb-bbfe4009cfda .
+
+km-dev:PredicateObjectMap_cde0722f-5cfc-4b98-8969-3ad617160123 rr:predicate bibo:pageEnd .
+
+_:node19de01q0ix7 rr:column "Pagination (end page)" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix7 .
+
+km-dev:PredicateObjectMap_cde0722f-5cfc-4b98-8969-3ad617160123 rr:objectMap _:node19de01q0ix7 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_cde0722f-5cfc-4b98-8969-3ad617160123 .
+
+km-dev:PredicateObjectMap_cde0722f-5cfc-4b98-8969-3ad617160123 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_cde0722f-5cfc-4b98-8969-3ad617160123 .
+
+km-dev:PredicateObjectMap_3fa22fe9-8da8-4966-8766-27ac3002dbf8 rr:predicate bibo:pageStart .
+
+_:node19de01q0ix8 rr:column "Pagination (start page)" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix8 .
+
+km-dev:PredicateObjectMap_3fa22fe9-8da8-4966-8766-27ac3002dbf8 rr:objectMap _:node19de01q0ix8 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_3fa22fe9-8da8-4966-8766-27ac3002dbf8 .
+
+km-dev:PredicateObjectMap_3fa22fe9-8da8-4966-8766-27ac3002dbf8 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3fa22fe9-8da8-4966-8766-27ac3002dbf8 .
+
+km-dev:PredicateObjectMap_a34f7c64-44f8-401b-82dd-75fd1f159b2c rr:predicate bibo:pmid .
+
+_:node19de01q0ix9 rr:column "pubmed" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix9 .
+
+km-dev:PredicateObjectMap_a34f7c64-44f8-401b-82dd-75fd1f159b2c rr:objectMap _:node19de01q0ix9 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_a34f7c64-44f8-401b-82dd-75fd1f159b2c .
+
+km-dev:PredicateObjectMap_a34f7c64-44f8-401b-82dd-75fd1f159b2c a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a34f7c64-44f8-401b-82dd-75fd1f159b2c .
+
+km-dev:PredicateObjectMap_9a3050e6-f93d-4a05-a28b-5034381c899b rr:predicate bibo:volume .
+
+_:node19de01q0ix10 rr:column "Volume" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix10 .
+
+km-dev:PredicateObjectMap_9a3050e6-f93d-4a05-a28b-5034381c899b rr:objectMap _:node19de01q0ix10 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_9a3050e6-f93d-4a05-a28b-5034381c899b .
+
+km-dev:PredicateObjectMap_9a3050e6-f93d-4a05-a28b-5034381c899b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9a3050e6-f93d-4a05-a28b-5034381c899b .
+
+km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 rr:predicate vlocalproperty:fullAuthorList .
+
+_:node19de01q0ix11 rr:column "Full Authors" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix11 .
+
+km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 rr:objectMap _:node19de01q0ix11 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 .
+
+km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a5837448-62cd-4cde-b06b-3416570a4a62 .
+
+km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 rr:predicate vlocalproperty:medlineCategory .
+
+_:node19de01q0ix12 rr:column "publication_type" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix12 .
+
+km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 rr:objectMap _:node19de01q0ix12 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 .
+
+km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d71fac99-6018-49a0-ac54-5c5feb1197a9 .
+
+km-dev:PredicateObjectMap_f5ae3aa6-9060-4119-b2d7-240ad1c93b2b rr:predicate vlocalproperty:meshTerms .
+
+_:node19de01q0ix13 rr:column "Mesh Terms" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix13 .
+
+km-dev:PredicateObjectMap_f5ae3aa6-9060-4119-b2d7-240ad1c93b2b rr:objectMap _:node19de01q0ix13 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_f5ae3aa6-9060-4119-b2d7-240ad1c93b2b .
+
+km-dev:PredicateObjectMap_f5ae3aa6-9060-4119-b2d7-240ad1c93b2b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f5ae3aa6-9060-4119-b2d7-240ad1c93b2b .
+
+km-dev:PredicateObjectMap_c09f6d80-0d0e-41d3-8ca0-61a58041d909 rr:predicate vivo:dateTimeValue .
+
+km-dev:RefObjectMap_0644da73-2ae6-4eed-9485-69746afdfb44 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_3ed4e3a5-d06d-47ba-a0c5-0f7e7ea97877 ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap km-dev:RefObjectMap_0644da73-2ae6-4eed-9485-69746afdfb44 .
+
+km-dev:PredicateObjectMap_c09f6d80-0d0e-41d3-8ca0-61a58041d909 rr:objectMap km-dev:RefObjectMap_0644da73-2ae6-4eed-9485-69746afdfb44 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_c09f6d80-0d0e-41d3-8ca0-61a58041d909 .
+
+km-dev:PredicateObjectMap_c09f6d80-0d0e-41d3-8ca0-61a58041d909 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c09f6d80-0d0e-41d3-8ca0-61a58041d909 .
+
+km-dev:PredicateObjectMap_11cd60c0-7d26-44b1-b400-7210a899c740 rr:predicate vivo:pmcid .
+
+_:node19de01q0ix14 rr:column "pubmedcentral" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix14 .
+
+km-dev:PredicateObjectMap_11cd60c0-7d26-44b1-b400-7210a899c740 rr:objectMap _:node19de01q0ix14 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_11cd60c0-7d26-44b1-b400-7210a899c740 .
+
+km-dev:PredicateObjectMap_11cd60c0-7d26-44b1-b400-7210a899c740 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_11cd60c0-7d26-44b1-b400-7210a899c740 .
+
+km-dev:PredicateObjectMap_aff65ba4-e6d0-4aaa-b449-af0223597b13 rr:predicate rdfs:label .
+
+_:node19de01q0ix15 rr:column "Title" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix15 .
+
+km-dev:PredicateObjectMap_aff65ba4-e6d0-4aaa-b449-af0223597b13 rr:objectMap _:node19de01q0ix15 .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_aff65ba4-e6d0-4aaa-b449-af0223597b13 .
+
+km-dev:PredicateObjectMap_aff65ba4-e6d0-4aaa-b449-af0223597b13 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_aff65ba4-e6d0-4aaa-b449-af0223597b13 .
+
+km-dev:PredicateObjectMap_0c915047-4d71-4249-b273-2a131ffea5d2 rr:predicate foaf:logo .
+
+km-dev:RefObjectMap_4f56a632-5d1a-4dc8-be8e-a2ad5bac20cf a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_f9b63e7e-6b9a-47c6-9fb5-2960c14da20c ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap km-dev:RefObjectMap_4f56a632-5d1a-4dc8-be8e-a2ad5bac20cf .
+
+km-dev:PredicateObjectMap_0c915047-4d71-4249-b273-2a131ffea5d2 rr:objectMap km-dev:RefObjectMap_4f56a632-5d1a-4dc8-be8e-a2ad5bac20cf .
+
+km-dev:TriplesMap_096fd396-b90a-46e6-9bef-41245f2e8a90 rr:predicateObjectMap km-dev:PredicateObjectMap_0c915047-4d71-4249-b273-2a131ffea5d2 .
+
+km-dev:PredicateObjectMap_0c915047-4d71-4249-b273-2a131ffea5d2 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0c915047-4d71-4249-b273-2a131ffea5d2 .
+
+km-dev:TriplesMap_3ed4e3a5-d06d-47ba-a0c5-0f7e7ea97877 a rr:TriplesMap .
+
+_:node19de01q0ix1 km-dev:hasTriplesMap km-dev:TriplesMap_3ed4e3a5-d06d-47ba-a0c5-0f7e7ea97877 .
+
+km-dev:TriplesMap_3ed4e3a5-d06d-47ba-a0c5-0f7e7ea97877 km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix16 rr:tableName "av_document_abstracts.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasLogicalTable _:node19de01q0ix16 .
+
+km-dev:TriplesMap_3ed4e3a5-d06d-47ba-a0c5-0f7e7ea97877 rr:logicalTable _:node19de01q0ix16 ;
+	rr:subjectMap _:node19de01q0ix17 .
+
+_:node19de01q0ix1 km-dev:hasSubjectMap _:node19de01q0ix17 .
+
+_:node19de01q0ix17 km-dev:isPartOfMapping _:node19de01q0ix1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://vivoweb.org/ontology/core#DateTimeValue1" ;
+	rr:class vivo:DateTimeValue ;
+	rr:template "{publication_uri}" .
+
+km-dev:PredicateObjectMap_89db69a8-812a-4585-8e91-cd0a01462ea4 rr:predicate vivo:dateTime .
+
+_:node19de01q0ix18 rr:column "Publication Date1" ;
+	a rr:ObjectMap ;
+	rr:datatype "http://www.w3.org/2001/XMLSchema#dateTime" ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix18 .
+
+km-dev:PredicateObjectMap_89db69a8-812a-4585-8e91-cd0a01462ea4 rr:objectMap _:node19de01q0ix18 .
+
+km-dev:TriplesMap_3ed4e3a5-d06d-47ba-a0c5-0f7e7ea97877 rr:predicateObjectMap km-dev:PredicateObjectMap_89db69a8-812a-4585-8e91-cd0a01462ea4 .
+
+km-dev:PredicateObjectMap_89db69a8-812a-4585-8e91-cd0a01462ea4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_89db69a8-812a-4585-8e91-cd0a01462ea4 .
+
+km-dev:PredicateObjectMap_eb3eeb5a-925f-4b1e-be7a-b2a43769ded7 rr:predicate vivo:dateTimePrecision .
+
+_:node19de01q0ix19 rr:constant vivo:yearPrecision ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix19 .
+
+km-dev:PredicateObjectMap_eb3eeb5a-925f-4b1e-be7a-b2a43769ded7 rr:objectMap _:node19de01q0ix19 .
+
+km-dev:TriplesMap_3ed4e3a5-d06d-47ba-a0c5-0f7e7ea97877 rr:predicateObjectMap km-dev:PredicateObjectMap_eb3eeb5a-925f-4b1e-be7a-b2a43769ded7 .
+
+km-dev:PredicateObjectMap_eb3eeb5a-925f-4b1e-be7a-b2a43769ded7 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_eb3eeb5a-925f-4b1e-be7a-b2a43769ded7 .
+
+km-dev:TriplesMap_f9b63e7e-6b9a-47c6-9fb5-2960c14da20c a rr:TriplesMap .
+
+_:node19de01q0ix1 km-dev:hasTriplesMap km-dev:TriplesMap_f9b63e7e-6b9a-47c6-9fb5-2960c14da20c .
+
+km-dev:TriplesMap_f9b63e7e-6b9a-47c6-9fb5-2960c14da20c km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix20 rr:tableName "av_document_abstracts.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasLogicalTable _:node19de01q0ix20 .
+
+km-dev:TriplesMap_f9b63e7e-6b9a-47c6-9fb5-2960c14da20c rr:logicalTable _:node19de01q0ix20 ;
+	rr:subjectMap _:node19de01q0ix21 .
+
+_:node19de01q0ix1 km-dev:hasSubjectMap _:node19de01q0ix21 .
+
+_:node19de01q0ix21 km-dev:isPartOfMapping _:node19de01q0ix1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://purl.org/ontology/bibo/Journal1" ;
+	rr:class bibo:Journal ;
+	rr:template "{ISSN}" .
+
+km-dev:PredicateObjectMap_7e21fb4e-aa5f-42fd-8083-0ab0eb89884c rr:predicate bibo:issn .
+
+_:node19de01q0ix22 rr:column "ISSN" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix22 .
+
+km-dev:PredicateObjectMap_7e21fb4e-aa5f-42fd-8083-0ab0eb89884c rr:objectMap _:node19de01q0ix22 .
+
+km-dev:TriplesMap_f9b63e7e-6b9a-47c6-9fb5-2960c14da20c rr:predicateObjectMap km-dev:PredicateObjectMap_7e21fb4e-aa5f-42fd-8083-0ab0eb89884c .
+
+km-dev:PredicateObjectMap_7e21fb4e-aa5f-42fd-8083-0ab0eb89884c a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_7e21fb4e-aa5f-42fd-8083-0ab0eb89884c .
+
+km-dev:PredicateObjectMap_8643c5fb-1d29-4587-8606-3c710b706cbf rr:predicate rdfs:label .
+
+_:node19de01q0ix23 rr:column "Journal OR Published proceedings" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasObjectMap _:node19de01q0ix23 .
+
+km-dev:PredicateObjectMap_8643c5fb-1d29-4587-8606-3c710b706cbf rr:objectMap _:node19de01q0ix23 .
+
+km-dev:TriplesMap_f9b63e7e-6b9a-47c6-9fb5-2960c14da20c rr:predicateObjectMap km-dev:PredicateObjectMap_8643c5fb-1d29-4587-8606-3c710b706cbf .
+
+km-dev:PredicateObjectMap_8643c5fb-1d29-4587-8606-3c710b706cbf a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node19de01q0ix1 .
+
+_:node19de01q0ix1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_8643c5fb-1d29-4587-8606-3c710b706cbf .
